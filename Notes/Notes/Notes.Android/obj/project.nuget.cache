@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZnuXRRiJQAw/2vBIP5J0PurBfIWuA1hwu3AszKuN/a7MsnNMJtf//K+pvdbnM6NJ0xHUI3Ck0wveEZibz+Zydw==",
+  "dgSpecHash": "XNMlyXNnySFWDitPbnEa9Xp0nfPk8USUrP7Dlw3IXtNqNy8wdbWPiV9RpY5jolhgSxYmLKJbYGdqtpdGGBAmwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Саша\\Desktop\\TryNotes\\copy\\Notes\\Notes\\Notes.Android\\Notes.Android.csproj",
+  "projectFilePath": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes.Android\\Notes.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Саша\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

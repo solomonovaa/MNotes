@@ -23,14 +23,23 @@ namespace Notes.Views
         {
             InitializeComponent();
 
-
-            // Set the BindingContext of the page to a new Note.
             BindingContext = new Note();
         }
         // удаляет картинку аккорда из стека
         private void DeleteChord(object sender, EventArgs e)
         {
-            stackForImages.Children.Remove(stackForImages.Children.Last());
+            
+            if (stackForImages.Children.Count > 0)
+            {
+                DeleteChordButton.FontSize = 15;
+                DeleteChordButton.Text = "Удалить аккорд";
+                stackForImages.Children.Remove(stackForImages.Children.Last());
+            }
+            else if (stackForImages.Children.Count == 0)
+            {
+                DeleteChordButton.FontSize = 12;
+                DeleteChordButton.Text = "Удалять нечего, дебил, зачем тыкаешь???";
+            }
         }
 
         void LoadNote(string filename)
@@ -58,23 +67,28 @@ namespace Notes.Views
         {
             var note = (Note)BindingContext;
 
-          
-
-            if (string.IsNullOrWhiteSpace(note.Filename))
+            if (MainEditorForText.Text != null)
             {
-                // Save the file.
-                var filename = Path.Combine(App.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
-                File.WriteAllText(filename, note.Text);
+                
+
+                if (string.IsNullOrWhiteSpace(note.Filename))
+                {
+                    // Сохранение файла
+                    var filename = Path.Combine(App.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
+                    File.WriteAllText(filename, note.Text);
+                }
+                else
+                {
+                    // Обновление файла
+                    File.WriteAllText(note.Filename, note.Text);
+                }
+                await Shell.Current.GoToAsync("..");
             }
             else
             {
-                // Update the file.
-                File.WriteAllText(note.Filename, note.Text);
+                SaveButton.FontSize = 12;
+                SaveButton.Text = "И что тут сохранять?!";
             }
-            
-
-            // Navigate backwards
-            await Shell.Current.GoToAsync("..");
         }
 
 

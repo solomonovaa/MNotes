@@ -1593,11 +1593,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Саша\\Desktop\\TryNotes\\copy\\Notes\\Notes\\Notes.iOS\\Notes.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes.iOS\\Notes.iOS.csproj",
       "projectName": "Notes.iOS",
-      "projectPath": "C:\\Users\\Саша\\Desktop\\TryNotes\\copy\\Notes\\Notes\\Notes.iOS\\Notes.iOS.csproj",
+      "projectPath": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes.iOS\\Notes.iOS.csproj",
       "packagesPath": "C:\\Users\\Саша\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Саша\\Desktop\\TryNotes\\copy\\Notes\\Notes\\Notes.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1618,8 +1618,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Саша\\Desktop\\TryNotes\\copy\\Notes\\Notes\\Notes\\Notes.csproj": {
-              "projectPath": "C:\\Users\\Саша\\Desktop\\TryNotes\\copy\\Notes\\Notes\\Notes\\Notes.csproj"
+            "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes\\Notes.csproj": {
+              "projectPath": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes\\Notes.csproj"
             }
           }
         }

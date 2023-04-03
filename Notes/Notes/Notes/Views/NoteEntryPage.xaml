@@ -7,7 +7,7 @@
         
         <Grid ColumnDefinitions="*,*">
                 <Button Text="Сохранить" Clicked="OnSaveButtonClicked" BackgroundColor="#f08b33" TextColor="#8a2c02" 
-                CornerRadius="5"></Button>
+                CornerRadius="5" x:Name="SaveButton"></Button>
                 <Button Grid.Column="1" Text="Удалить" Clicked="OnDeleteButtonClicked" BackgroundColor="#f08b33" TextColor="#8a2c02" 
                 CornerRadius="5"></Button>
         </Grid>
@@ -63,12 +63,13 @@
             </StackLayout>
         </ScrollView>
         <Button Text="Удалить аккод" Clicked="DeleteChord" BackgroundColor="#f08b33" TextColor="#8a2c02" 
-                CornerRadius="5" HeightRequest="40"/>
+                CornerRadius="5" HeightRequest="40" x:Name="DeleteChordButton"/>
         <ScrollView Orientation="Horizontal" x:Name="scrollForChords" LayoutChanged="scrollForChords_SizeChanged">
             <StackLayout Orientation="Horizontal" x:Name="stackForImages" />
         </ScrollView>
             <Label Text="{Binding Date}"/>
-            <Editor Placeholder="Начните вводить текст..." Text="{Binding Text}" AutoSize="TextChanges"></Editor>
+            <Editor Placeholder="Начните вводить текст..." Text="{Binding Text}" AutoSize="TextChanges" 
+                    x:Name="MainEditorForText"></Editor>
 
         </StackLayout>
 </ScrollView>
