@@ -24,7 +24,9 @@ namespace Notes.Views
             InitializeComponent();
 
             BindingContext = new Note();
+            
         }
+    
         // удаляет картинку аккорда из стека
         private void DeleteChord(object sender, EventArgs e)
         {
@@ -69,8 +71,6 @@ namespace Notes.Views
 
             if (MainEditorForText.Text != null)
             {
-                
-
                 if (string.IsNullOrWhiteSpace(note.Filename))
                 {
                     // Сохранение файла
@@ -506,5 +506,66 @@ namespace Notes.Views
         {
             await scrollForChords.ScrollToAsync(stackForImages, ScrollToPosition.End, true);
         }
+        private void BDownButton(object sender, EventArgs e)
+        {
+            Image boy = new Image();
+            boy.HeightRequest = 40;
+            boy.WidthRequest = 40;
+            boy.Source = "BDown.png";
+            stackForBoy.Children.Add(boy);
+        }
+        private void MDownButton(object sender, EventArgs e)
+        {
+            Image boy = new Image();
+            boy.HeightRequest = 40;
+            boy.WidthRequest = 40;
+            boy.Source = "MDown.png";
+            stackForBoy.Children.Add(boy);
+        }
+        private void BUpButton(object sender, EventArgs e)
+        {
+            Image boy = new Image();
+            boy.HeightRequest = 40;
+            boy.WidthRequest = 40;
+            boy.Source = "BUp.png";
+            stackForBoy.Children.Add(boy);
+        }
+        private void MUpButton(object sender, EventArgs e)
+        {
+            Image boy = new Image();
+            boy.HeightRequest = 40;
+            boy.WidthRequest = 40;
+            boy.Source = "MUp.png";
+            stackForBoy.Children.Add(boy);
+        }
+        private void crossButton(object sender, EventArgs e)
+        {
+            Image boy = new Image();
+            boy.HeightRequest = 40;
+            boy.WidthRequest = 40;
+            boy.Source = "cross.png";
+            stackForBoy.Children.Add(boy);
+        }
+        private async void scrollForBoy_SizeChanged(object sender, EventArgs e)
+        {
+            await scrollForBoy.ScrollToAsync(stackForBoy, ScrollToPosition.End, true);
+        }
+        private void DeleteBoy(object sender, EventArgs e)
+        {
+
+            if (stackForBoy.Children.Count > 0)
+            {
+                DeleteBoyButton.FontSize = 15;
+                DeleteBoyButton.Text = "Удалить аккорд";
+                stackForBoy.Children.Remove(stackForBoy.Children.Last());
+            }
+            else if (stackForBoy.Children.Count == 0)
+            {
+                DeleteBoyButton.FontSize = 12;
+                DeleteBoyButton.Text = "Удалять нечего, дебил, зачем тыкаешь???";
+            }
+        }
+
+       
     }
 }

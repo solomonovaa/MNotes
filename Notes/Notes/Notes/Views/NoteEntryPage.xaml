@@ -67,8 +67,28 @@
         <ScrollView Orientation="Horizontal" x:Name="scrollForChords" LayoutChanged="scrollForChords_SizeChanged">
             <StackLayout Orientation="Horizontal" x:Name="stackForImages" />
         </ScrollView>
+            <Label Text="Нажмите на нужный удар, чтобы записать бой" TextColor="#8a2c02" 
+               FontSize="Small" FontAttributes="Italic" HorizontalOptions="CenterAndExpand" Margin="5"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="15">
+                <ImageButton Source="BDown.png" WidthRequest="50" HeightRequest="50" 
+                        CornerRadius="10" Clicked="BDownButton"/>
+                <ImageButton Source="BUp.png" WidthRequest="50" HeightRequest="50" 
+                        CornerRadius="10" Clicked="BUpButton"/>
+                <ImageButton Source="MDown.png" WidthRequest="50" HeightRequest="50" 
+                        CornerRadius="10" Clicked="MDownButton"/>
+                <ImageButton Source="MUp.png" WidthRequest="50" HeightRequest="50" 
+                        CornerRadius="10" Clicked="MUpButton"/>
+                <ImageButton Source="cross.png" WidthRequest="50" HeightRequest="50" 
+                        CornerRadius="10" Clicked="crossButton"/>
+            </StackLayout>
+            <Button Text="Удалить удар" Clicked="DeleteBoy" BackgroundColor="#f08b33" TextColor="#8a2c02" 
+                CornerRadius="5" HeightRequest="40" x:Name="DeleteBoyButton"/>
+            <ScrollView Orientation="Horizontal" x:Name="scrollForBoy" LayoutChanged="scrollForBoy_SizeChanged">
+                <StackLayout Orientation="Horizontal" x:Name="stackForBoy" Spacing="2"/>
+            </ScrollView>
+           
             <Label Text="{Binding Date}"/>
-            <Editor Placeholder="Начните вводить текст..." Text="{Binding Text}" AutoSize="TextChanges" 
+            <Editor Placeholder="Начните вводить текст песни..." Text="{Binding Text}" AutoSize="TextChanges" 
                     x:Name="MainEditorForText"></Editor>
 
         </StackLayout>
