@@ -10,12 +10,13 @@ namespace Notes.Views
 {
     public partial class NotesPage : ContentPage
     {
+
         public NotesPage()
         {
             InitializeComponent();
         }
 
-
+        internal bool isFavorite = false;
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -28,11 +29,13 @@ namespace Notes.Views
             var files = Directory.EnumerateFiles(App.FolderPath, "*.notes.txt");
             foreach (var filename in files)
             {
+                
                 string line1 = File.ReadLines(filename).First();
                 notes.Add(new Note
                 {
                     Filename = filename,
                     Title = line1,
+                    //IsFavorite = isFavorite,
                     Text = File.ReadAllText(filename),
                     Date = File.GetCreationTime(filename)
                 });
@@ -62,5 +65,9 @@ namespace Notes.Views
                 await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.Filename}");
             }
         }
+
+       
+
+
     }
 }

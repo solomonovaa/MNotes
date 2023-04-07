@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Windows;
 using System.IO;
 using System.Linq;
 using Notes.Models;
 using Xamarin.Forms;
-
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using System.Windows.Input;
 
 namespace Notes.Views
 {
@@ -17,16 +20,27 @@ namespace Notes.Views
                 LoadNote(value);
             }
         }
-
-
+       // public ICommand ButtonAa { get; private set; }
+        // "массив" для записи выбранных аккордов
+        public List<string> ChordsNamesArray = new List<string>();
         public NoteEntryPage()
         {
             InitializeComponent();
-
+           // ButtonAa = new Command(ButtonAaClicked);
             BindingContext = new Note();
+        }
+        private void ButtonAaClicked()
+        {
+
             
         }
-    
+       
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            //ButtonAa.Execute(null);
+        }
+
         // удаляет картинку аккорда из стека
         private void DeleteChord(object sender, EventArgs e)
         {
@@ -37,7 +51,7 @@ namespace Notes.Views
                 DeleteChordButton.Text = "Удалить аккорд";
                 stackForImages.Children.Remove(stackForImages.Children.Last());
             }
-            else if (stackForImages.Children.Count == 0)
+            else 
             {
                 DeleteChordButton.FontSize = 12;
                 DeleteChordButton.Text = "Удалять нечего, дебил, зачем тыкаешь???";
@@ -64,12 +78,10 @@ namespace Notes.Views
             }
         }
 
-
         async void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
-
-            if (MainEditorForText.Text != null)
+            if (MainEditorForText.Text != null && MainEditorForText.Text.Length > 0)
             {
                 if (string.IsNullOrWhiteSpace(note.Filename))
                 {
@@ -91,27 +103,38 @@ namespace Notes.Views
             }
         }
 
-
+        
         async void OnDeleteButtonClicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
 
 
-            // Delete the file.
+            // Удаление файла
             if (File.Exists(note.Filename))
             {
                 File.Delete(note.Filename);
             }
 
 
-            // Navigate backwards
             await Shell.Current.GoToAsync("..");
         }
 
         private void A(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                // Получение текста из editor и разделение его на массив строк
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+
+                // Добавление нового текста в конец первой строки
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " A ");
+
+                // Объединение массива строк обратно в одну строку и установка ее в editor
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
+                ChordsNamesArray.Add("A");
                 Image chord = new Image();
                 Aa.BackgroundColor = Color.DarkOrange;
                 Aa.BorderColor = Color.Brown;
@@ -122,6 +145,7 @@ namespace Notes.Views
             }
             else
             {
+                ChordsNamesArray.Add("PA");
                 Image chord = new Image();
                 Aa.BackgroundColor = Color.DarkOrange;
                 Aa.BorderColor = Color.Brown;
@@ -130,11 +154,17 @@ namespace Notes.Views
                 chord.Source = "a.png";
                 stackForImages.Children.Add(chord);
             }
-
         }
 
         private void Am(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " Am ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
+
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -158,6 +188,12 @@ namespace Notes.Views
         }
         private void A7(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " A7 ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -181,6 +217,12 @@ namespace Notes.Views
         }
         private void B(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " B ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -204,6 +246,12 @@ namespace Notes.Views
         }
         private void Bm(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " Bm ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -227,6 +275,12 @@ namespace Notes.Views
         }
         private void B7(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " B7 ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -250,6 +304,12 @@ namespace Notes.Views
         }
         private void C(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " C ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -273,6 +333,12 @@ namespace Notes.Views
         }
         private void Cm(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " Cm ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -296,6 +362,12 @@ namespace Notes.Views
         }
         private void D(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " D ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -319,6 +391,12 @@ namespace Notes.Views
         }
         private void Dm(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " Dm ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -342,6 +420,12 @@ namespace Notes.Views
         }
         private void E(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " E ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -365,6 +449,12 @@ namespace Notes.Views
         }
         private void E7(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " E7 ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -388,6 +478,12 @@ namespace Notes.Views
         }
         private void Em(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " Em ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -411,6 +507,12 @@ namespace Notes.Views
         }
         private void F(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " F ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -434,6 +536,12 @@ namespace Notes.Views
         }
         private void Fm(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " Fm ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -457,6 +565,12 @@ namespace Notes.Views
         }
         private void G(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " G ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -480,6 +594,12 @@ namespace Notes.Views
         }
         private void Gm(object sender, EventArgs e)
         {
+            if (WriteDownTheChords.IsToggled)
+            {
+                string[] editorLines = MainEditorForText.Text.Split('\n');
+                editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " Gm ");
+                MainEditorForText.Text = string.Join("\n", editorLines);
+            }
             if (GuitarOrPiano.IsToggled)
             {
                 Image chord = new Image();
@@ -566,6 +686,6 @@ namespace Notes.Views
             }
         }
 
-       
+   
     }
 }
