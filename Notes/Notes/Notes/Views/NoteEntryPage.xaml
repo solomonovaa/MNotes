@@ -88,6 +88,12 @@
                 <ImageButton Source="cross.png" WidthRequest="50" HeightRequest="50" 
                         CornerRadius="10" Clicked="crossButton"/>
             </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Записывать бой" TextColor="#8a2c02" FontSize="Medium" FontAttributes="Italic"
+                     HorizontalOptions="Start" Margin="5"/>
+                <Switch x:Name="WriteDownTheBoy" HorizontalOptions="CenterAndExpand"
+                    OnColor="#eecc8d" ThumbColor="DarkOrange"/>
+            </StackLayout>
             <Button Text="Удалить удар" Clicked="DeleteBoy" BackgroundColor="#f08b33" TextColor="#8a2c02" 
                 CornerRadius="5" HeightRequest="40" x:Name="DeleteBoyButton"/>
             <ScrollView Orientation="Horizontal" x:Name="scrollForBoy" LayoutChanged="scrollForBoy_SizeChanged">
@@ -96,7 +102,7 @@
            
             <Label Text="{Binding Date}"/>
            
-            <ScrollView HeightRequest="200" x:Name="scrollForMainEntry">
+            <ScrollView HeightRequest="1000" x:Name="scrollForMainEntry">
             <Editor Placeholder="Начните вводить текст песни..." Text="{Binding Text}" AutoSize="TextChanges" 
                     x:Name="MainEditorForText"></Editor>
             </ScrollView>
