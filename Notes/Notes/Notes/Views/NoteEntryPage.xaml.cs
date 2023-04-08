@@ -17,25 +17,16 @@ namespace Notes.Views
                 LoadNote(value);
             }
         }
-       // public ICommand ButtonAa { get; private set; }
-        // "массив" для записи выбранных аккордов
-        //public List<string> ChordsNamesArray = new List<string>();
+
         public NoteEntryPage()
         {
             InitializeComponent();
-           // ButtonAa = new Command(ButtonAaClicked);
             BindingContext = new Note();
-        }
-        private void ButtonAaClicked()
-        {
-
-            
         }
        
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            //ButtonAa.Execute(null);
         }
 
         // удаляет картинку аккорда из стека
@@ -54,13 +45,12 @@ namespace Notes.Views
                 DeleteChordButton.Text = "Удалять нечего, дебил, зачем тыкаешь???";
             }
         }
-
+        // Загрузка заметки, при открывании страницы
         void LoadNote(string filename)
         {
            
             try
             {
-                // Retrieve the note and set it as the BindingContext of the page.
                 Note note = new Note
                 {
                     Filename = filename,
@@ -74,7 +64,7 @@ namespace Notes.Views
                 Console.WriteLine("Failed to load note.");
             }
         }
-
+        // Сохранить заметку
         async void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
@@ -100,22 +90,40 @@ namespace Notes.Views
             }
         }
 
-        
+        // Если человек хочет выйти со страницы
+        protected override bool OnBackButtonPressed()
+        {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                var result = await DisplayAlert("Данные со страницы не сохранены!", "Вы действительно хотите выйти со страницы?", "Да", "Нет");
+
+                if (result)
+                {
+                    await Navigation.PopAsync();
+                }
+            });
+
+            return true;
+        }
+        // Удалить заметку
         async void OnDeleteButtonClicked(object sender, EventArgs e)
         {
-            var note = (Note)BindingContext;
+            // Окно с предупреждением, точно ли пользователь хочет удалить заметку 
+            bool answer = await DisplayAlert("Удаление заметки", "Вы уверены, что хотите удалить заметку?", "Да", "Отмена");
 
-
-            // Удаление файла
-            if (File.Exists(note.Filename))
+            if (answer)
             {
-                File.Delete(note.Filename);
+                var note = (Note)BindingContext;
+                // Удаление файла
+                if (File.Exists(note.Filename))
+                {
+                    File.Delete(note.Filename);
+                }
+                await Shell.Current.GoToAsync("..");
             }
-
-
-            await Shell.Current.GoToAsync("..");
+           
         }
-
+        // методы обработки нажатия на кнопку с аккордом
         private void A(object sender, EventArgs e)
         {
             if (WriteDownTheChords.IsToggled)
@@ -785,11 +793,12 @@ namespace Notes.Views
                 }
             }
         }
-
+        // Автопрокрутка стека с картинками аккодров до последнего добавленного элемента
         private async void scrollForChords_SizeChanged(object sender, EventArgs e)
         {
             await scrollForChords.ScrollToAsync(stackForImages, ScrollToPosition.End, true);
         }
+        // Методы для обработки нажатия кнопок с боем
         private void BDownButton(object sender, EventArgs e)
         {
             if (WriteDownTheBoy.IsToggled)
@@ -920,10 +929,12 @@ namespace Notes.Views
                 stackForBoy.Children.Add(boy);
             }
         }
+        // Автопрокрутка стека с картинками ударов боя до последнего добавленного элемента
         private async void scrollForBoy_SizeChanged(object sender, EventArgs e)
         {
             await scrollForBoy.ScrollToAsync(stackForBoy, ScrollToPosition.End, true);
         }
+        // Удаление последней добавленной картинки в стек для боя
         private void DeleteBoy(object sender, EventArgs e)
         {
 

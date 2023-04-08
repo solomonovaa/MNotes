@@ -102,7 +102,7 @@
            
             <Label Text="{Binding Date}"/>
            
-            <ScrollView HeightRequest="1000" x:Name="scrollForMainEntry">
+            <ScrollView HeightRequest="800" x:Name="scrollForMainEntry">
             <Editor Placeholder="Начните вводить текст песни..." Text="{Binding Text}" AutoSize="TextChanges" 
                     x:Name="MainEditorForText"></Editor>
             </ScrollView>
