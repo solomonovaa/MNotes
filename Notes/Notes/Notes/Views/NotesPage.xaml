@@ -1,31 +1,37 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Notes.Views"
              x:Class="Notes.Views.NotesPage" Title="MNotes" BackgroundColor="AntiqueWhite">
     
         
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Добавить" Clicked="OnAddClicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
-    <StackLayout>
-              
+    <StackLayout Orientation="Vertical" x:Name="stackLayout">
+        <ScrollView>
+            <StackLayout Orientation="Horizontal" x:Name="MainStackLayout"/>
+        </ScrollView>
         <CollectionView x:Name="collectionView" Margin="10" SelectionMode="Single" SelectionChanged="OnSelectionChanged">
-        
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"></LinearItemsLayout>
-        </CollectionView.ItemsLayout>
-              
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Frame Padding="7" BorderColor="SaddleBrown" CornerRadius="10">
-                    <StackLayout>
-                        <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold"></Label>
-                        <Label Text="{Binding Date}" TextColor="Silver" FontSize="Small" FontAttributes="Italic"/>
-                    </StackLayout>
-                </Frame>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
 
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"></LinearItemsLayout>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:Name="MainDataTemplate">
+                    <Frame Padding="7" BorderColor="SaddleBrown" CornerRadius="10" x:Name="frameForNote">
+                        <StackLayout Orientation="Horizontal" x:Name="stackForOneNote">
+                            <ImageButton Source="favorite.jpg" Margin="5"
+                                         Clicked="FavoriteButton_Clicked" WidthRequest="30" VerticalOptions="Center"/>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Title}" FontSize="20" FontAttributes="Bold" FontFamily="forAllText"></Label>
+                                <Label Text="{Binding Date}" TextColor="Silver" FontSize="Small" FontFamily="forAllText"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
     </StackLayout>
 </ContentPage>

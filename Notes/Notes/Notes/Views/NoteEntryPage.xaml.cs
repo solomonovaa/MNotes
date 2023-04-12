@@ -27,6 +27,8 @@ namespace Notes.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            // Скрыть кнопку "назад"
+            NavigationPage.SetHasBackButton(this, false);
         }
 
         // удаляет картинку аккорда из стека
@@ -95,7 +97,7 @@ namespace Notes.Views
         {
             Device.BeginInvokeOnMainThread(async () =>
             {
-                var result = await DisplayAlert("Данные со страницы не сохранены!", "Вы действительно хотите выйти со страницы?", "Да", "Нет");
+                var result = await DisplayAlert("Изменения не сохранены!", "Вы уверены, хотите выйти со страницы?", "Да", "Нет");
 
                 if (result)
                 {

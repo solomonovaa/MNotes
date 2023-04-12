@@ -6,6 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\forButtons.ttf" />
+    <None Remove="Fonts\forText.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\forButtons.ttf" />
+    <EmbeddedResource Include="Fonts\forText.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="C1.CollectionView" Version="4.3.20193.437" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />

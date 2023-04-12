@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "C1.CollectionView/4.3.20193.437": {
+        "type": "package",
+        "dependencies": {
+          "System.Linq.Parallel": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/C1.CollectionView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.1/C1.CollectionView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -68,6 +84,15 @@
           "lib/netstandard2.0/System.Buffers.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Linq.Parallel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -273,6 +298,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "C1.CollectionView": "4.3.20193.437",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
@@ -286,6 +312,22 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "C1.CollectionView/4.3.20193.437": {
+        "type": "package",
+        "dependencies": {
+          "System.Linq.Parallel": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/C1.CollectionView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.1/C1.CollectionView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -352,6 +394,15 @@
           "lib/netstandard2.0/System.Buffers.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Linq.Parallel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -557,6 +608,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "C1.CollectionView": "4.3.20193.437",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
@@ -570,6 +622,22 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "C1.CollectionView/4.3.20193.437": {
+        "type": "package",
+        "dependencies": {
+          "System.Linq.Parallel": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/C1.CollectionView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.1/C1.CollectionView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -636,6 +704,15 @@
           "lib/netstandard2.0/System.Buffers.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Linq.Parallel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -841,6 +918,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "C1.CollectionView": "4.3.20193.437",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
@@ -854,6 +932,22 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "C1.CollectionView/4.3.20193.437": {
+        "type": "package",
+        "dependencies": {
+          "System.Linq.Parallel": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/C1.CollectionView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.1/C1.CollectionView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -920,6 +1014,15 @@
           "lib/netstandard2.0/System.Buffers.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Linq.Parallel/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -1125,6 +1228,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "C1.CollectionView": "4.3.20193.437",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
           "sqlite-net-pcl": "1.8.116"
@@ -1139,6 +1243,20 @@
     }
   },
   "libraries": {
+    "C1.CollectionView/4.3.20193.437": {
+      "sha512": "JRVqLKonPYsRjfA6STbaFHI7ROZpROZo1IFFPBIBhhhtoUaRb1nmSgvcjA93yAqpyHbTJhIRmxVbE6nK8GTwgw==",
+      "type": "package",
+      "path": "c1.collectionview/4.3.20193.437",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "c1.collectionview.4.3.20193.437.nupkg.sha512",
+        "c1.collectionview.nuspec",
+        "lib/netstandard1.1/C1.CollectionView.dll",
+        "lib/netstandard1.1/C1.CollectionView.xml",
+        "license_EN.txt"
+      ]
+    },
     "sqlite-net-pcl/1.8.116": {
       "sha512": "W0NuwAOVVAR9LP4eZwNBIrim1p3EN7t8iNfSHXEhtzKAd4YyItekoQ8NyWYs4faVSrN2KZr/P5u4hycCjKKexg==",
       "type": "package",
@@ -1219,6 +1337,63 @@
         "system.buffers.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Linq.Parallel/4.3.0": {
+      "sha512": "td7x21K8LalpjTWCzW/nQboQIFbq9i0r+PCyBBCdLWWnm4NBcdN18vpz/G9hCpUaCIfRL+ZxJNVTywlNlB1aLQ==",
+      "type": "package",
+      "path": "system.linq.parallel/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Linq.Parallel.dll",
+        "lib/netstandard1.3/System.Linq.Parallel.dll",
+        "lib/portable-net45+win8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Linq.Parallel.dll",
+        "ref/netcore50/System.Linq.Parallel.xml",
+        "ref/netcore50/de/System.Linq.Parallel.xml",
+        "ref/netcore50/es/System.Linq.Parallel.xml",
+        "ref/netcore50/fr/System.Linq.Parallel.xml",
+        "ref/netcore50/it/System.Linq.Parallel.xml",
+        "ref/netcore50/ja/System.Linq.Parallel.xml",
+        "ref/netcore50/ko/System.Linq.Parallel.xml",
+        "ref/netcore50/ru/System.Linq.Parallel.xml",
+        "ref/netcore50/zh-hans/System.Linq.Parallel.xml",
+        "ref/netcore50/zh-hant/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/System.Linq.Parallel.dll",
+        "ref/netstandard1.1/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/de/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/es/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/fr/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/it/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/ja/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/ko/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/ru/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/zh-hans/System.Linq.Parallel.xml",
+        "ref/netstandard1.1/zh-hant/System.Linq.Parallel.xml",
+        "ref/portable-net45+win8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.linq.parallel.4.3.0.nupkg.sha512",
+        "system.linq.parallel.nuspec"
       ]
     },
     "System.Memory/4.5.3": {
@@ -1580,6 +1755,7 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "C1.CollectionView >= 4.3.20193.437",
       "Notes >= 1.0.0",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196",
@@ -1628,6 +1804,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "C1.CollectionView": {
+            "target": "Package",
+            "version": "[4.3.20193.437, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"

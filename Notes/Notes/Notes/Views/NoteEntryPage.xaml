@@ -7,75 +7,75 @@
         
         <Grid ColumnDefinitions="*,*">
                 <Button Text="Сохранить" Clicked="OnSaveButtonClicked" BackgroundColor="#f08b33" TextColor="#8a2c02" 
-                CornerRadius="5" x:Name="SaveButton"></Button>
+                CornerRadius="5" x:Name="SaveButton" FontFamily="forAllButtons"></Button>
                 <Button Grid.Column="1" Text="Удалить" Clicked="OnDeleteButtonClicked" BackgroundColor="#f08b33" TextColor="#8a2c02" 
-                CornerRadius="5"></Button>
+                CornerRadius="5" FontFamily="forAllButtons"></Button>
 
             </Grid>
 
           
             <Label Text="Нажмите на аккорд, чтобы увидеть его аппликатуру" TextColor="#8a2c02" 
-               FontSize="Small" FontAttributes="Italic" HorizontalOptions="CenterAndExpand" Margin="0"/>
+               FontSize="14" FontFamily="forAllText" HorizontalOptions="CenterAndExpand" Margin="0"/>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Гитара" TextColor="#8a2c02" FontSize="Medium" FontAttributes="Italic"
+                <Label Text="Гитара" TextColor="#8a2c02" FontSize="Medium" FontFamily="forAllText"
                      HorizontalOptions="Start" Margin="10"/>
             <Switch x:Name="GuitarOrPiano" HorizontalOptions="CenterAndExpand"
                     OnColor="#eecc8d" ThumbColor="DarkOrange"/>
-            <Label Text="Пианино" TextColor="#8a2c02" FontSize="Medium" FontAttributes="Italic"
+                <Label Text="Пианино" TextColor="#8a2c02" FontSize="Medium" FontFamily="forAllText"
                      HorizontalOptions="End" Margin="10"/>
         </StackLayout>
             
             <ScrollView Orientation="Horizontal">
                 <StackLayout Orientation="Horizontal">
-                    <Button Text="A" WidthRequest="50" HeightRequest="40" Clicked="A" BackgroundColor="#eecc8d" 
+                    <Button Text="A" WidthRequest="50" HeightRequest="40" Clicked="A" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5" x:Name="Aa" Command="{Binding ButtonAa}" />
-                    <Button Text="Am" x:Name="Aam" WidthRequest="50" HeightRequest="40" Clicked="Am" BackgroundColor="#eecc8d"
+                    <Button Text="Am" x:Name="Aam" WidthRequest="50" HeightRequest="40" Clicked="Am" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5" TextTransform="None"/>
-                    <Button Text="A7" x:Name="Aa7" WidthRequest="50" HeightRequest="40" Clicked="A7" BackgroundColor="#eecc8d"
+                    <Button Text="A7" x:Name="Aa7" WidthRequest="50" HeightRequest="40" Clicked="A7" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="B" x:Name="Bb" WidthRequest="50" HeightRequest="40" Clicked="B" BackgroundColor="#eecc8d" 
+                    <Button Text="B" x:Name="Bb" WidthRequest="50" HeightRequest="40" Clicked="B" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="Bm" x:Name="Bbm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Bm" BackgroundColor="#eecc8d"
+                    <Button Text="Bm" x:Name="Bbm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Bm" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="B7" x:Name="Bb7" WidthRequest="50" HeightRequest="40" Clicked="B7" BackgroundColor="#eecc8d" 
+                    <Button Text="B7" x:Name="Bb7" WidthRequest="50" HeightRequest="40" Clicked="B7" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="C" x:Name="Cc" WidthRequest="50" HeightRequest="40" Clicked="C" BackgroundColor="#eecc8d"
+                    <Button Text="C" x:Name="Cc" WidthRequest="50" HeightRequest="40" Clicked="C" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="Cm" x:Name="Ccm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Cm" BackgroundColor="#eecc8d"
+                    <Button Text="Cm" x:Name="Ccm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Cm" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="D" x:Name="Dd" WidthRequest="50" HeightRequest="40" Clicked="D" BackgroundColor="#eecc8d" 
+                    <Button Text="D" x:Name="Dd" WidthRequest="50" HeightRequest="40" Clicked="D" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="Dm" x:Name="Ddm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Dm" BackgroundColor="#eecc8d"
+                    <Button Text="Dm" x:Name="Ddm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Dm" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="E" x:Name="Ee" WidthRequest="50" HeightRequest="40" Clicked="E" BackgroundColor="#eecc8d"
+                    <Button Text="E" x:Name="Ee" WidthRequest="50" HeightRequest="40" Clicked="E" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="E7" x:Name="Ee7" WidthRequest="50" HeightRequest="40" Clicked="E7" BackgroundColor="#eecc8d" 
+                    <Button Text="E7" x:Name="Ee7" WidthRequest="50" HeightRequest="40" Clicked="E7" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="Em" x:Name="Eem" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Em" BackgroundColor="#eecc8d"
+                    <Button Text="Em" x:Name="Eem" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Em" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="F" x:Name="Ff" WidthRequest="50" HeightRequest="40" Clicked="F" BackgroundColor="#eecc8d" 
+                    <Button Text="F" x:Name="Ff" WidthRequest="50" HeightRequest="40" Clicked="F" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="Fm" x:Name="Ffm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Fm" BackgroundColor="#eecc8d"
+                    <Button Text="Fm" x:Name="Ffm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Fm" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                  BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="G" x:Name="Gg" WidthRequest="50" HeightRequest="40" Clicked="G" BackgroundColor="#eecc8d"
+                    <Button Text="G" x:Name="Gg" WidthRequest="50" HeightRequest="40" Clicked="G" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
-                    <Button Text="Gm" x:Name="Ggm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Gm" BackgroundColor="#eecc8d" 
+                    <Button Text="Gm" x:Name="Ggm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Gm" BackgroundColor="#eecc8d" FontFamily="forAllButtons"
                 BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                 </StackLayout>
             </ScrollView>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Записывать аккорды" TextColor="#8a2c02" FontSize="Medium" FontAttributes="Italic"
+                <Label Text="Записывать аккорды" TextColor="#8a2c02" FontSize="Medium" FontFamily="forAllText"
                      HorizontalOptions="Start" Margin="5"/>
                 <Switch x:Name="WriteDownTheChords" HorizontalOptions="CenterAndExpand"
                     OnColor="#eecc8d" ThumbColor="DarkOrange"/>
             </StackLayout>
             <Button Text="Удалить аккод" Clicked="DeleteChord" BackgroundColor="#f08b33" TextColor="#8a2c02" 
-                CornerRadius="5" HeightRequest="40" x:Name="DeleteChordButton"/>
+                CornerRadius="5" HeightRequest="40" x:Name="DeleteChordButton" FontFamily="forAllButtons"/>
         <ScrollView Orientation="Horizontal" x:Name="scrollForChords" LayoutChanged="scrollForChords_SizeChanged">
             <StackLayout Orientation="Horizontal" x:Name="stackForImages" />
         </ScrollView>
             <Label Text="Нажмите на нужный удар, чтобы записать бой" TextColor="#8a2c02" 
-               FontSize="Small" FontAttributes="Italic" HorizontalOptions="CenterAndExpand" Margin="5"/>
+               FontSize="15" FontFamily="forAllText" HorizontalOptions="CenterAndExpand" Margin="5"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="15">
                 <ImageButton Source="BDown.png" WidthRequest="50" HeightRequest="50" 
                         CornerRadius="10" Clicked="BDownButton"/>
@@ -89,21 +89,21 @@
                         CornerRadius="10" Clicked="crossButton"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Записывать бой" TextColor="#8a2c02" FontSize="Medium" FontAttributes="Italic"
+                <Label Text="Записывать бой" TextColor="#8a2c02" FontSize="Medium" FontFamily="forAllText"
                      HorizontalOptions="Start" Margin="5"/>
                 <Switch x:Name="WriteDownTheBoy" HorizontalOptions="CenterAndExpand"
                     OnColor="#eecc8d" ThumbColor="DarkOrange"/>
             </StackLayout>
             <Button Text="Удалить удар" Clicked="DeleteBoy" BackgroundColor="#f08b33" TextColor="#8a2c02" 
-                CornerRadius="5" HeightRequest="40" x:Name="DeleteBoyButton"/>
+                CornerRadius="5" HeightRequest="40" x:Name="DeleteBoyButton" FontFamily="forAllButtons"/>
             <ScrollView Orientation="Horizontal" x:Name="scrollForBoy" LayoutChanged="scrollForBoy_SizeChanged">
                 <StackLayout Orientation="Horizontal" x:Name="stackForBoy" Spacing="2"/>
             </ScrollView>
            
-            <Label Text="{Binding Date}"/>
            
-            <ScrollView HeightRequest="800" x:Name="scrollForMainEntry">
-            <Editor Placeholder="Начните вводить текст песни..." Text="{Binding Text}" AutoSize="TextChanges" 
+           
+            <ScrollView HeightRequest="600" x:Name="scrollForMainEntry">
+                <Editor Placeholder="Начните вводить текст песни..." Text="{Binding Text}" AutoSize="TextChanges" 
                     x:Name="MainEditorForText"></Editor>
             </ScrollView>
 
