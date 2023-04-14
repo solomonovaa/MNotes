@@ -1118,7 +1118,9 @@ namespace Notes.Views
         //Вызов функции скролла при нажатие кнопки
         private async void StartScroll(object sender, EventArgs e)
         {
-            await Scroll();
+          //Если элементов меньше 5, то не сможем осуществить прокрутку
+          //Из-за этого делаем проверку на кол-во элементов
+          if(addedChordsList.Count>=5) await Scroll();
         }
 
         async Task Scroll()
@@ -1127,7 +1129,7 @@ namespace Notes.Views
             //На самом деле формула полная туфта, тут бы в идеале еще и время прокрутки брать в учет, чтобы увеличивать или
             //уменьшать скорость прокрутки, но как прототип пойдет ¯\_(ツ)_/¯
             int scrollSize = int.Parse(scrollForChords.ContentSize.Width.ToString()) / addedChordsList.Count;
-            //Двигаем с задержкой в 10 миллисекунд список, пока кординаты прокрутки по X меньше чем 
+            //Двигаем список, пока кординаты прокрутки по X меньше чем 
             //ширина всех элементов минус ~5 элементов
             while (scrollForChords.ScrollX < int.Parse(scrollForChords.ContentSize.Width.ToString()) - (scrollSize * 5))
             {

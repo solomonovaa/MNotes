@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gzd5DYQajVm3pxWJ6n5cFhS/QgY+sDaQFNCPGJPr5z6GVKMIip8fL1mQuDKePg14usnTUI+66FGRG/NAch7nVw==",
+  "dgSpecHash": "4YXkvIFRBnyPZwfN94sWSfJRt/cITh+M/7xU6mcJlpxpGXW/0puQNVZ6G9NWsYeUYKhaNrO/LUTrdzx9krxQiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes\\Notes.csproj",
+  "projectFilePath": "C:\\Users\\Саша\\Desktop\\Notes\\Notes\\Notes\\Notes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Саша\\.nuget\\packages\\c1.collectionview\\4.3.20193.437\\c1.collectionview.4.3.20193.437.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

@@ -3764,11 +3764,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes.Android\\Notes.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Саша\\Desktop\\Notes\\Notes\\Notes.Android\\Notes.Android.csproj",
       "projectName": "Notes.Android",
-      "projectPath": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes.Android\\Notes.Android.csproj",
+      "projectPath": "C:\\Users\\Саша\\Desktop\\Notes\\Notes\\Notes.Android\\Notes.Android.csproj",
       "packagesPath": "C:\\Users\\Саша\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes.Android\\obj\\",
+      "outputPath": "C:\\Users\\Саша\\Desktop\\Notes\\Notes\\Notes.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3789,8 +3789,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes\\Notes.csproj": {
-              "projectPath": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes\\Notes.csproj"
+            "C:\\Users\\Саша\\Desktop\\Notes\\Notes\\Notes\\Notes.csproj": {
+              "projectPath": "C:\\Users\\Саша\\Desktop\\Notes\\Notes\\Notes\\Notes.csproj"
             }
           }
         }

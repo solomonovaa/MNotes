@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yqbEFelE7OZfGzqRjMl+lpcfZqrw9/8FehsDJ8yOOs++YGPOWlOUpBtnf1sKaBSzE3g0WnQQpdEETkMq8ty6RA==",
+  "dgSpecHash": "wrX56tdEleoGEg1or7wjOCX5LELJsksVRFfgLHeA+a7Vzvyb6vHhsWwlGiGJFBict/0vmT4p5Gbygqmug9hw4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Саша\\Desktop\\TryNotes\\work\\Notes\\Notes\\Notes.Android\\Notes.Android.csproj",
+  "projectFilePath": "C:\\Users\\Саша\\Desktop\\Notes\\Notes\\Notes.Android\\Notes.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Саша\\.nuget\\packages\\c1.collectionview\\4.3.20193.437\\c1.collectionview.4.3.20193.437.nupkg.sha512",
     "C:\\Users\\Саша\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",

@@ -17,7 +17,7 @@
 
 
             <Label Text="Нажмите на аккорд, чтобы увидеть его аппликатуру" TextColor="#8a2c02" FontFamily="forDescription"
-               FontSize="Small" FontAttributes="Italic" HorizontalOptions="CenterAndExpand" Margin="0"/>
+               FontSize="13" FontAttributes="Italic" HorizontalOptions="CenterAndExpand" Margin="0"/>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Гитара" TextColor="#8a2c02" FontSize="Medium" FontAttributes="Italic"
                      HorizontalOptions="Start" Margin="10" FontFamily="forDescription"/>

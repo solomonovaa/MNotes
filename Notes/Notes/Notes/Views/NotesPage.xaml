@@ -8,7 +8,7 @@
         <ToolbarItem Text="Добавить" Clicked="OnAddClicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <StackLayout>
-        <CollectionView x:Name="collectionViewFavs" Margin="10" SelectionMode="Single" IsVisible="false" HeightRequest="100">
+        <CollectionView x:Name="collectionViewFavs" Margin="10" SelectionMode="Single" IsVisible="false" HeightRequest="100" SelectionChanged="OnSelectionChanged">
 
 
             <CollectionView.ItemsLayout>
@@ -38,7 +38,7 @@
                 <DataTemplate>
                     <Frame Padding="7" BorderColor="SaddleBrown" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
-                            <ImageButton Source="unFavoriteImage.jpg" Margin="5" x:Name="favoriteButton"
+                            <ImageButton Source="{Binding FavoriteStatus}" Margin="5" x:Name="favoriteButton"
                                          Clicked="FavoriteButton_Clicked" WidthRequest="30" VerticalOptions="Center"/>
                             <StackLayout>
                                 <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold"></Label>
