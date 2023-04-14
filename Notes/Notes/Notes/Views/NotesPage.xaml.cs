@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using C1.CollectionView;
+using System.Xml;
 using Notes.Models;
 using Xamarin.Forms;
 
+
 namespace Notes.Views
 {
-
     public partial class NotesPage : ContentPage
     {
 
@@ -16,29 +16,66 @@ namespace Notes.Views
         {
             InitializeComponent();
         }
-        public bool isFavorite = false;
+        //Коллекция избранных заметок
+        public List<Note> favsNotes = new List<Note>();
         protected override void OnAppearing()
         {
+            
             base.OnAppearing();
-           
             var notes = new List<Note>();
-            var files = Directory.EnumerateFiles(App.FolderPath, "*.notes.txt");
-            foreach (var filename in files)
-            {
-                string line1 = File.ReadLines(filename).First();
 
-                notes.Add(new Note
+            if (File.Exists(Path.Combine(App.FolderPath, "notes.xml")))
+            {
+                XmlDocument xDoc = new XmlDocument();
+                xDoc.Load(Path.Combine(App.FolderPath, "notes.xml"));
+                XmlElement xRoot = xDoc.DocumentElement;
+                foreach (XmlNode node in xRoot)
                 {
-                    Filename = filename,
-                    Title = line1,
-                    IsFavorite = isFavorite,
-                    Text = File.ReadAllText(filename),
-                    Date = File.GetCreationTime(filename)
-                });
+                    XmlNode xDate = node.Attributes.GetNamedItem("Date");
+                    XmlNode xTitle = node.Attributes.GetNamedItem("Title");
+                    XmlNode xId = node.Attributes.GetNamedItem("ID");
+                    XmlNode xFavStatus = node.Attributes.GetNamedItem("FavoriteStatus");
+                    XmlNode xText = node.SelectSingleNode("Text");
+                    XmlNode xChords = node.SelectSingleNode("Chords");
+                    XmlNode xBoys = node.SelectSingleNode("Boys");
+                    if (xFavStatus.InnerText == "1")
+                    {
+                        favsNotes.Add(new Note
+                        {
+                            Id = xId.InnerText,
+                            Title = xTitle.InnerText,
+                            Text = xText.InnerText,
+                            Chords = xChords.InnerText,
+                            Boys = xBoys.InnerText,
+                            Date = DateTime.Parse(xDate.InnerText)
+                        });
+                    }
+                    notes.Add(new Note
+                    {
+                        Id = xId.InnerText,
+                        Title = xTitle.InnerText,
+                        Text = xText.InnerText,
+                        Chords = xChords.InnerText,
+                        Boys = xBoys.InnerText,
+                        Date = DateTime.Parse(xDate.InnerText)
+                    });
+                }
             }
-            collectionView.ItemsSource = notes
-            .OrderBy(d => d.Date)
+            collectionViewFavs.ItemsSource = favsNotes
+            .OrderBy(d => d.Id)
             .ToList();
+            collectionView.ItemsSource = notes
+            .OrderBy(d => d.FavoriteStatus)
+            .ToList();
+            if (favsNotes.Count > 0)
+            {
+                collectionViewFavs.IsVisible = true;
+            }
+            else
+            {
+                collectionViewFavs.IsVisible = false;
+            }
+          
 
         }
 
@@ -47,6 +84,11 @@ namespace Notes.Views
         {
             await Shell.Current.GoToAsync(nameof(NoteEntryPage));
         }
+        private void FavoriteButton_Clicked(object sender, EventArgs e)
+        {
+            collectionViewFavs.IsVisible = true;
+
+        }
 
 
         async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -54,18 +96,12 @@ namespace Notes.Views
             if (e.CurrentSelection != null)
             {
                 Note note = (Note)e.CurrentSelection.FirstOrDefault();
-                await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.Filename}");
+                await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.Id}");
             }
         }
 
 
-        private void FavoriteButton_Clicked(object sender, EventArgs e)
-        {
-            isFavorite = true;
 
-        }
 
     }
 }
-
-    

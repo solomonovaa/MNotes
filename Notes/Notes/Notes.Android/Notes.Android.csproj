@@ -214,7 +214,10 @@
     <AndroidResource Include="Resources\drawable\MUp.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\favorite.png" />
+    <AndroidResource Include="Resources\drawable\favoriteImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\unFavoriteImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

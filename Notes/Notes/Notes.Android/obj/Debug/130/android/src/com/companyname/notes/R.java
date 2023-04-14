@@ -9888,7 +9888,7 @@ public final class R {
     public static final int e7=0x7f070072;
     public static final int em=0x7f070073;
     public static final int f=0x7f070074;
-    public static final int favorite=0x7f070075;
+    public static final int favoriteimage=0x7f070075;
     public static final int fm=0x7f070076;
     public static final int g=0x7f070077;
     public static final int gm=0x7f070078;
@@ -9955,6 +9955,7 @@ public final class R {
     public static final int test_custom_background=0x7f0700b5;
     public static final int tooltip_frame_dark=0x7f0700b6;
     public static final int tooltip_frame_light=0x7f0700b7;
+    public static final int unfavoriteimage=0x7f0700b8;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

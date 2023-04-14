@@ -16583,7 +16583,7 @@ namespace Notes.Droid
 			public const int f = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int favorite = 2131165301;
+			public const int favoriteImage = 2131165301;
 			
 			// aapt resource value: 0x7F070076
 			public const int fm = 2131165302;
@@ -16782,6 +16782,9 @@ namespace Notes.Droid
 			
 			// aapt resource value: 0x7F0700B7
 			public const int tooltip_frame_light = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int unFavoriteImage = 2131165368;
 			
 			static Drawable()
 			{

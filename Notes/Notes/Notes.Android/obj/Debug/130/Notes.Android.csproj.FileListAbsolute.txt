@@ -1379,4 +1379,5 @@ C:\Users\Саша\Desktop\TryNotes\work\Notes\Notes\Notes.Android\obj\Debug\130\
 C:\Users\Саша\Desktop\TryNotes\work\Notes\Notes\Notes.Android\obj\Debug\130\android\assets\System.Text.RegularExpressions.dll
 C:\Users\Саша\Desktop\TryNotes\work\Notes\Notes\Notes.Android\obj\Debug\130\android\assets\System.Threading.dll
 C:\Users\Саша\Desktop\TryNotes\work\Notes\Notes\Notes.Android\obj\Debug\130\android\assets\System.Threading.Tasks.dll
-C:\Users\Саша\Desktop\TryNotes\work\Notes\Notes\Notes.Android\obj\Debug\130\res\drawable\favorite.png
+C:\Users\Саша\Desktop\TryNotes\work\Notes\Notes\Notes.Android\obj\Debug\130\res\drawable\unfavoriteimage.jpg
+C:\Users\Саша\Desktop\TryNotes\work\Notes\Notes\Notes.Android\obj\Debug\130\res\drawable\favoriteimage.jpg
