@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:Notes.Views" 
+           x:Class="Notes.AppShell">
+    <TabBar>
+        <ShellContent Title="All"
+                      Icon="mainIcon.png"
+                      ContentTemplate="{DataTemplate views:NotesPage}" />
+        <ShellContent Title="Favorite"
+                      Icon="favoriteIcon.png"
+                      ContentTemplate="{DataTemplate views:FavoritePage}" />
+    </TabBar>
+</Shell>
