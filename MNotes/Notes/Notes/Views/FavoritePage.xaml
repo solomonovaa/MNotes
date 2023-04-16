@@ -3,7 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.FavoritePage" Title="Избранное" BackgroundColor="AntiqueWhite">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout x:Name="stackOnFavPage">
+            <CollectionView x:Name="collectionViewOnFavPage" Margin="10" SelectionMode="Single" 
+                            SelectionChanged="OnSelectionChangedFavPage">
+                
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"></LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="7" BorderColor="SaddleBrown" CornerRadius="10">
+                            <StackLayout Orientation="Horizontal">
+                                <ImageButton Source="{Binding FavoriteStatus}" Margin="5" x:Name="favoriteButtonOnFavPage"
+                                         Clicked="favoriteButtonOnFavPage_Clicked" WidthRequest="30" VerticalOptions="Center"/>
+                                <StackLayout>
+                                    <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding Date}" TextColor="Silver" FontSize="Small" FontAttributes="Italic"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
         </StackLayout>
     </ContentPage.Content>
