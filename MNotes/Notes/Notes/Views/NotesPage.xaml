@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.NotesPage" Title="MNotes" BackgroundColor="AntiqueWhite">
 
 
@@ -8,7 +8,8 @@
         <ToolbarItem Text="Добавить" Clicked="OnAddClicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <StackLayout>
-        <CollectionView x:Name="collectionViewFavs" Margin="10" SelectionMode="Single" IsVisible="false" HeightRequest="100" SelectionChanged="OnSelectionChanged">
+        <CollectionView x:Name="collectionViewFavs" Margin="10" SelectionMode="Single" IsVisible="false" 
+                        HeightRequest="100" SelectionChanged="OnSelectionChanged">
 
 
             <CollectionView.ItemsLayout>
@@ -17,7 +18,7 @@
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="7" BorderColor="SaddleBrown" CornerRadius="10">
+                    <Frame Padding="7" BorderColor="Purple" CornerRadius="10">
                         <StackLayout>
                             <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold"></Label>
                             <Label Text="{Binding Date}" TextColor="Silver" FontSize="Small" FontAttributes="Italic"/>

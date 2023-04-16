@@ -43,7 +43,7 @@ namespace Notes.Views
                             Title = xTitle.InnerText,
                             Text = xText.InnerText,
                             Date = DateTime.Parse(xDate.InnerText),
-                            FavoriteStatus = "favoriteImage.jpg"
+                            FavoriteStatus = "favoriteOrange.jpg"
                         });
 
                     }

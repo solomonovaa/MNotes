@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
-using C1.CollectionView;
 using Notes.Models;
 using Xamarin.Forms;
 
@@ -48,7 +47,7 @@ namespace Notes.Views
                         Title = xTitle.InnerText,
                         Text = xText.InnerText,
                         Date = DateTime.Parse(xDate.InnerText),
-                        FavoriteStatus = "unFavoriteImage.jpg"
+                        FavoriteStatus = "unFavoriteOrange.jpg"
                     });
                     if (xFavStatus.InnerText == "1")
                     {   //Если у заметки стоит значение избранности = 1, то дополнительно добавляем её и в список избранных заметок
@@ -58,10 +57,10 @@ namespace Notes.Views
                             Title = xTitle.InnerText,
                             Text = xText.InnerText,
                             Date = DateTime.Parse(xDate.InnerText),
-                            FavoriteStatus= "favoriteImage.jpg"
+                            FavoriteStatus= "favoriteOrange.jpg"
                         });
                         //Так же меняем у последней добавленной заметки значение FavoriteStatus на путь к картинке favoriteImage
-                        notes[notes.Count - 1].FavoriteStatus = "favoriteImage.jpg";
+                        notes[notes.Count - 1].FavoriteStatus = "favoriteOrange.jpg";
                     }
                    
                 }
@@ -114,9 +113,9 @@ namespace Notes.Views
                 xNodeData.SetAttribute("FavoriteStatus", "1");
                 favsNotes.Add(selectedNote);
                 //Меняем у экземпляра заметки значение FavoriteStatus на путь к картинке favoriteImage
-                selectedNote.FavoriteStatus = "favoriteImage.jpg";
+                selectedNote.FavoriteStatus = "favoriteOrange.jpg";
                 //Меняем картинку на нажатой кнопке
-                favButton.Source = "favoriteImage.jpg";
+                favButton.Source = "favoriteOrange.jpg";
                 //Обновляем CollectionViewFavs
                 collectionViewFavs.ItemsSource = favsNotes
                 .OrderBy(d => d.Id)
@@ -134,9 +133,9 @@ namespace Notes.Views
                 //Удаляем найденую заметку
                 favsNotes.Remove(itemtoremove);
                 //Меняем у экземпляра заметки значение FavoriteStatus на путь к картинке unFavoriteImage
-                selectedNote.FavoriteStatus = "unFavoriteImage.jpg";
+                selectedNote.FavoriteStatus = "unFavoriteOrange.jpg";
                 //Меняем картинку на нажатой кнопке
-                favButton.Source = "unFavoriteImage.jpg";
+                favButton.Source = "unFavoriteOrange.jpg";
                 //Обновляем CollectionViewFavs
                 collectionViewFavs.ItemsSource = favsNotes
                 .OrderBy(d => d.Id)

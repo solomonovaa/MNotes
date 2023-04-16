@@ -6,11 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Fonts\forDescription.ttf" />
+    <None Remove="Fonts\fontForButtons.ttf" />
+    <None Remove="Fonts\fontForDescription.ttf" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Fonts\forDescription.ttf" />
+    <EmbeddedResource Include="Fonts\fontForButtons.ttf" />
+    <EmbeddedResource Include="Fonts\fontForDescription.ttf" />
   </ItemGroup>
 
   <ItemGroup>

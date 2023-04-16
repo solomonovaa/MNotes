@@ -3487,3 +3487,8 @@ C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\stamp\_Conver
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\bgimage.jpg
+C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\favoritenew.jpg
+C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\unfavoritenew.jpg
+C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\favoriteorange.jpg
+C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\unfavoriteorange.jpg

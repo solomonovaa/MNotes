@@ -13,7 +13,7 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="7" BorderColor="SaddleBrown" CornerRadius="10">
+                        <Frame Padding="7" BorderColor="Purple" CornerRadius="10">
                             <StackLayout Orientation="Horizontal">
                                 <ImageButton Source="{Binding FavoriteStatus}" Margin="5" x:Name="favoriteButtonOnFavPage"
                                          Clicked="favoriteButtonOnFavPage_Clicked" WidthRequest="30" VerticalOptions="Center"/>

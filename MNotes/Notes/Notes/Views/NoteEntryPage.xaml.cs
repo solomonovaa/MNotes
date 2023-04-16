@@ -152,7 +152,7 @@ namespace Notes.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
+            
         }
         //Добавляет объект в стэк
         async void AddObjectToStack(typesOfObjects objectType, StackLayout stack, string buttonName, string fileSource)

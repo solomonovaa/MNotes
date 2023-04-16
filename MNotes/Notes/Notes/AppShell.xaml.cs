@@ -10,6 +10,7 @@ namespace Notes
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(NoteEntryPage), typeof(NoteEntryPage));
+            mainShell.BackgroundColor = Color.AntiqueWhite;
         }
     }
 }
