@@ -72,9 +72,10 @@ namespace Notes.Views
             collectionView.ItemsSource = notes
             .OrderBy(d => d.Id)
             .ToList();
+            // Пока не решила, нужен ли этот стек наверху, так что пусть пока будет так
             if (favsNotes.Count > 0)
             {
-                collectionViewFavs.IsVisible = true;
+                collectionViewFavs.IsVisible = false;
             }
             else
             {
@@ -146,10 +147,10 @@ namespace Notes.Views
             collectionView.ItemsSource = notes
             .OrderBy(d => d.Id)
             .ToList();
-
+            // Пока не решила, нужен ли этот стек наверху, так что пусть пока будет так
             if (favsNotes.Count > 0)
             {
-                collectionViewFavs.IsVisible = true;
+                collectionViewFavs.IsVisible = false;
             }
             else
             {
