@@ -6,23 +6,21 @@ using System.Xml;
 using Notes.Models;
 using Xamarin.Forms;
 
-
 namespace Notes.Views
 {
     public partial class NotesPage : ContentPage
     {
-
+        
         public NotesPage()
         {
             InitializeComponent();
         }
-       
+        //Коллекция заметок
+        public List<Note> notes = new List<Note>();
         protected override void OnAppearing()
         {
-            
+            searchBar.Text = "";
             base.OnAppearing();
-            //Коллекция заметок
-            var notes = new List<Note>();
             //Коллекция избранных заметок
             List<Note> favsNotes = new List<Note>();
             if (File.Exists(Path.Combine(App.FolderPath, "notes.xml")))
@@ -166,9 +164,27 @@ namespace Notes.Views
                 await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.Id}");
             }
         }
-
-
-
-
+        private string searchQuery;
+        private void SearchNotes()
+        {
+            if (string.IsNullOrEmpty(searchQuery))
+            {
+                // Если строка поиска пустая, просто отображаем полный список заметок
+                collectionView.ItemsSource = notes
+                .OrderBy(d => d.Id)
+                .ToList();
+            }
+            else
+            {
+                // Иначе выполняем поиск по строке и отображаем только совпадающие заметки
+                var filteredNotes = notes.Where(n => n.Title.Contains(searchQuery) || n.Text.Contains(searchQuery)).ToList();
+                collectionView.ItemsSource = filteredNotes;
+            }
+        }
+        private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+        {
+            searchQuery = e.NewTextValue;
+            SearchNotes();
+        }
     }
 }

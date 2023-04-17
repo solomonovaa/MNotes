@@ -8,6 +8,7 @@
         <ToolbarItem Text="Добавить" Clicked="OnAddClicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <StackLayout>
+        <SearchBar TextChanged="OnSearchTextChanged" Placeholder="Поиск" BackgroundColor="#FFEACF" x:Name="searchBar"/>
         <CollectionView x:Name="collectionViewFavs" Margin="10" SelectionMode="Single" IsVisible="false" 
                         HeightRequest="100" SelectionChanged="OnSelectionChanged">
 
