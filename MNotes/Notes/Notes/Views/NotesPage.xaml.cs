@@ -15,10 +15,11 @@ namespace Notes.Views
         {
             InitializeComponent();
         }
-        //Коллекция заметок
-        public List<Note> notes = new List<Note>();
+        
         protected override void OnAppearing()
         {
+            //Коллекция заметок
+            List<Note> notes = new List<Note>();
             searchBar.Text = "";
             base.OnAppearing();
             //Коллекция избранных заметок
@@ -167,12 +168,17 @@ namespace Notes.Views
         private string searchQuery;
         private void SearchNotes()
         {
+            // Сщздаем лист заметок
+            List<Note> notes = new List<Note>();
+            // Если collectionView не пустая, заполняем лист содержимым из collectionView
+            if (collectionView.ItemsSource != null)
+            { 
+                notes = collectionView.ItemsSource.Cast<Note>().ToList();
+            }
             if (string.IsNullOrEmpty(searchQuery))
             {
                 // Если строка поиска пустая, просто отображаем полный список заметок
-                collectionView.ItemsSource = notes
-                .OrderBy(d => d.Id)
-                .ToList();
+                collectionView.ItemsSource = notes;
             }
             else
             {
