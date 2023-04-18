@@ -40,7 +40,9 @@
                 <DataTemplate>
                     <Frame Padding="7" BorderColor="SaddleBrown" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
-                            <ImageButton Source="{Binding FavoriteStatus}" Margin="5" x:Name="favoriteButton"
+                            <ImageButton Source="deleteButtonImage.jpg" Margin="5" Clicked="DeleteOnMainPageButton_Clicked"
+                                         WidthRequest="30"/>
+                            <ImageButton Source="{Binding FavoriteStatus}" x:Name="favoriteButton"
                                          Clicked="FavoriteButton_Clicked" WidthRequest="30" VerticalOptions="Center"/>
                             <StackLayout>
                                 <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold"></Label>

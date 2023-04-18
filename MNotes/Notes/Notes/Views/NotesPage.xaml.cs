@@ -192,5 +192,49 @@ namespace Notes.Views
             searchQuery = e.NewTextValue;
             SearchNotes();
         }
+
+        private async void DeleteOnMainPageButton_Clicked(object sender, EventArgs e)
+        {
+            bool answer = await DisplayAlert("Удаление заметки", "Вы уверены, что хотите удалить заметку?", "Да", "Отмена");
+
+            if (answer)
+            {
+                //Переводим object sender в ImageButton
+                ImageButton favButton = (ImageButton)sender;
+                //Через BindingContext получаем информацию к какой заметке относится эта кнопка
+                var context = favButton.BindingContext;
+                //Так как BindingContext выдал значение типа object, то его нужно перевести в заметку
+                var selectedNote = context as Note;
+                //Создаем список заметок
+                List<Note> notes = new List<Note>();
+                //Добавляем туда значения из CollectionView
+                notes = collectionView.ItemsSource.Cast<Note>().ToList();
+                //Получаем информацию о выбранной заметки
+                XmlDocument xDoc = new XmlDocument();
+                xDoc.Load(Path.Combine(App.FolderPath, "notes.xml"));
+                XmlElement xRoot = xDoc.DocumentElement;
+                XmlNode xNode = xRoot.SelectSingleNode($"/Notes/Note[@ID={selectedNote.Id}]");
+                XmlElement xNodeData = (XmlElement)xNode;
+                notes.Remove(selectedNote);
+                xDoc.Save(Path.Combine(App.FolderPath, "notes.xml"));
+                //Обновляем основной CollectionView
+                collectionView.ItemsSource = notes
+                .OrderBy(d => d.Id)
+                .ToList();
+
+                //Проверяем новая ли заметка или же загруженная
+                //Если у заметки есть ID, то заметка старая. В противном случае новая
+                if (selectedNote.Id != null)
+                {   //Находим заметку по ID
+                    XmlNode xNote = xRoot.SelectSingleNode($"/Notes/Note[@ID={selectedNote.Id}]");
+                    if (xNote != null)
+                    {
+                        //Если заметка надена, то удаляем
+                        xRoot.RemoveChild(xNote);
+                        xDoc.Save(Path.Combine(App.FolderPath, "notes.xml"));
+                    }
+                }
+            }
+        }
     }
 }
