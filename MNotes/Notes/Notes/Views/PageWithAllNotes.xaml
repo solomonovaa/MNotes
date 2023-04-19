@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Notes.Views.PageWithAllNotes"
+    Title="MNotes"
+    BackgroundColor="AntiqueWhite"
+>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Добавить"
+            Clicked="AddNoteClicked"
+        >
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <SearchBar
+            x:Name="SearchBar"
+            TextChanged="OnSearchTextChanged"
+            Placeholder="Поиск"
+            BackgroundColor="#FFEACF"
+        >
+        </SearchBar>
+        <CollectionView
+            x:Name="FavoriteNotesCollection"
+            Margin="10"
+            SelectionMode="Single"
+            IsVisible="false"
+            HeightRequest="100"
+            SelectionChanged="OnSelectionChanged"
+        >
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="10"
+                >
+                </LinearItemsLayout>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Padding="7"
+                        BorderColor="Purple"
+                        CornerRadius="10"
+                    >
+                        <StackLayout>
+                            <Label
+                                Text="{Binding Title}"
+                                FontSize="Medium" FontAttributes="Bold"
+                            >
+                            </Label>
+                            <Label
+                                Text="{Binding Date}"
+                                TextColor="Silver"
+                                FontSize="Small"
+                                FontAttributes="Italic"
+                            >
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <CollectionView
+            x:Name="CommonNotesCollection"
+            Margin="10"
+            SelectionMode="Single"
+            SelectionChanged="OnSelectionChanged"
+        >
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Vertical"
+                    ItemSpacing="10"
+                >
+                </LinearItemsLayout>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Padding="7"
+                        BorderColor="SaddleBrown"
+                        CornerRadius="10"
+                    >
+                        <StackLayout Orientation="Horizontal">
+                            <ImageButton 
+                                Clicked="DeleteNoteClicked"
+                                Source="deleteButtonImage.jpg" 
+                                Margin="5" 
+                                WidthRequest="30"
+                            >
+                            </ImageButton>
+                            <ImageButton 
+                                x:Name="ToggleFavoriteStatusButton"
+                                Clicked="ToggleFavoriteStatusClicked" 
+                                Source="{Binding FavoriteStatus}" 
+                                WidthRequest="30" 
+                                VerticalOptions="Center"
+                            >
+                            </ImageButton>
+                            <StackLayout>
+                                <Label 
+                                    Text="{Binding Title}" 
+                                    FontSize="Medium" 
+                                    FontAttributes="Bold"
+                                >
+                                </Label>
+                                <Label 
+                                    Text="{Binding Date}" 
+                                    TextColor="Silver" 
+                                    FontSize="Small" 
+                                    FontAttributes="Italic"
+                                >
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+</ContentPage>

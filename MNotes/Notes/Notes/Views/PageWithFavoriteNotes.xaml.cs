@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace Notes.Views
 {
-    public partial class FavoritePage : ContentPage
+    public partial class PageWithFavoriteNotes : ContentPage
     {
-        public FavoritePage()
+        public PageWithFavoriteNotes()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Notes.Views.FavoritePage" Title="Избранное" BackgroundColor="AntiqueWhite">
+             x:Class="Notes.Views.PageWithFavoriteNotes" Title="Избранное" BackgroundColor="AntiqueWhite">
     <ContentPage.Content>
         <StackLayout x:Name="stackOnFavPage">
             <CollectionView x:Name="collectionViewOnFavPage" Margin="10" SelectionMode="Single" 

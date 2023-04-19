@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Саша\\Desktop\\MNotes\\Notes\\Notes\\Notes.csproj": {}
+    "/home/albert/RiderProjects/MNotes/MNotes/Notes/Notes/Notes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Саша\\Desktop\\MNotes\\Notes\\Notes\\Notes.csproj": {
+    "/home/albert/RiderProjects/MNotes/MNotes/Notes/Notes/Notes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Саша\\Desktop\\MNotes\\Notes\\Notes\\Notes.csproj",
+        "projectUniqueName": "/home/albert/RiderProjects/MNotes/MNotes/Notes/Notes/Notes.csproj",
         "projectName": "Notes",
-        "projectPath": "C:\\Users\\Саша\\Desktop\\MNotes\\Notes\\Notes\\Notes.csproj",
-        "packagesPath": "C:\\Users\\Саша\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Саша\\Desktop\\MNotes\\Notes\\Notes\\obj\\",
+        "projectPath": "/home/albert/RiderProjects/MNotes/MNotes/Notes/Notes/Notes.csproj",
+        "packagesPath": "/home/albert/.nuget/packages/",
+        "outputPath": "/home/albert/RiderProjects/MNotes/MNotes/Notes/Notes/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Саша\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/albert/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +72,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }
