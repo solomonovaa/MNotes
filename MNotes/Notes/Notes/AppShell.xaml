@@ -7,9 +7,9 @@
     <TabBar>
         <ShellContent Title="All"
                       Icon="mainIcon.png"
-                      ContentTemplate="{DataTemplate views:NotesPage}" />
+                      ContentTemplate="{DataTemplate views:PageWithAllNotes}" />
         <ShellContent Title="Favorite"
                       Icon="favoriteIcon.png"
-                      ContentTemplate="{DataTemplate views:FavoritePage}" />
+                      ContentTemplate="{DataTemplate views:PageWithFavoriteNotes}" />
     </TabBar>
 </Shell>

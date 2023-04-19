@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Notes.Views.FavoritePage.xaml", "Views/FavoritePage.xaml", typeof(global::Notes.Views.FavoritePage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Notes.Views.PageWithFavoriteNotes.xaml", "Views/PageWithFavoriteNotes.xaml", typeof(global::Notes.Views.PageWithFavoriteNotes))]
 
 namespace Notes.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/FavoritePage.xaml")]
-    public partial class FavoritePage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/PageWithFavoriteNotes.xaml")]
+    public partial class PageWithFavoriteNotes : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.StackLayout stackOnFavPage;
@@ -24,7 +24,7 @@ namespace Notes.Views {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(FavoritePage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PageWithFavoriteNotes));
             stackOnFavPage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "stackOnFavPage");
             collectionViewOnFavPage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CollectionView>(this, "collectionViewOnFavPage");
         }
