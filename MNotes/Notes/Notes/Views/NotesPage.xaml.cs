@@ -15,7 +15,8 @@ namespace Notes.Views
         {
             InitializeComponent();
         }
-        
+        // Лист заметок для поиска
+        List<Note> notesForSearch = new List<Note>();
         protected override void OnAppearing()
         {
             //Коллекция заметок
@@ -63,6 +64,7 @@ namespace Notes.Views
                     }
                    
                 }
+                notesForSearch = notes;
             }
             collectionViewFavs.ItemsSource = favsNotes
             .OrderBy(d => d.Id)
@@ -165,30 +167,33 @@ namespace Notes.Views
                 await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.Id}");
             }
         }
+        // Поле для текста, который ищет пользователь
         private string searchQuery;
         private void SearchNotes()
         {
-            // Сщздаем лист заметок
+            // Создаем лист заметок для отображения текущих результатов поиска
             List<Note> notes = new List<Note>();
-            // Если collectionView не пустая, заполняем лист содержимым из collectionView
-            if (collectionView.ItemsSource != null)
-            { 
-                notes = collectionView.ItemsSource.Cast<Note>().ToList();
-            }
+            // Заносим туда значения из заранее сохраненного списка всех заметок
+            notes = notesForSearch;
+            // Проверяем поле ввода текста для поиска на пустоту
             if (string.IsNullOrEmpty(searchQuery))
             {
                 // Если строка поиска пустая, просто отображаем полный список заметок
                 collectionView.ItemsSource = notes;
             }
-            else
+            else 
             {
                 // Иначе выполняем поиск по строке и отображаем только совпадающие заметки
                 var filteredNotes = notes.Where(n => n.Title.Contains(searchQuery) || n.Text.Contains(searchQuery)).ToList();
                 collectionView.ItemsSource = filteredNotes;
             }
+            
+
         }
+
         private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
         {
+
             searchQuery = e.NewTextValue;
             SearchNotes();
         }
