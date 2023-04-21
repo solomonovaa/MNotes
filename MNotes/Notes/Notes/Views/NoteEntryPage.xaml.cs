@@ -1148,5 +1148,39 @@ namespace Notes.Views
         {
             await mainScrollView.ScrollToAsync(mainScrollView, ScrollToPosition.Start, false);
         }
+        bool IsBoyVisibleFIrstClick = true;
+        private void constructBoyButton_Clicked(object sender, EventArgs e)
+        {
+            if (IsBoyVisibleFIrstClick)
+            {
+                constructBoyButton.Text = "Скрыть конструктор";
+                constructBoyStack.IsVisible = true;
+                IsBoyVisibleFIrstClick = false;
+            }
+            else
+            {
+                constructBoyButton.Text = "Скрыть бой";
+                constructBoyStack.IsVisible = false;
+                IsBoyVisibleFIrstClick = true;
+            }
+            
+        }
+        bool IsChordVisibleFIrstClick = true;
+        private void constructChordButton_Clicked(object sender, EventArgs e)
+        {
+            if (IsChordVisibleFIrstClick)
+            {
+                constructChordButton.Text = "Скрыть аккорды";
+                stackIsChordsVisible.IsVisible = true;
+                IsChordVisibleFIrstClick = false;
+            }
+            else
+            {
+                constructChordButton.Text = "Посмотреть аккорды";
+                stackIsChordsVisible.IsVisible = false;
+                IsChordVisibleFIrstClick = true;
+            }
+
+        }
     }
 }
