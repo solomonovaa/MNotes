@@ -37,6 +37,10 @@
                         BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5" TextTransform="None"/>
                         <Button Text="A7" x:Name="Aa7" WidthRequest="50" HeightRequest="40" Clicked="A7" BackgroundColor="#eecc8d"
                         BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
+                        <Button Text="A#" WidthRequest="50" HeightRequest="40" Clicked="Ash" BackgroundColor="#eecc8d" 
+                        BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5" x:Name="AaSh" Command="{Binding ButtonAa}" />
+                        <Button Text="A#m" x:Name="AaShm" WidthRequest="60" HeightRequest="40" Clicked="Ashm" BackgroundColor="#eecc8d"
+                        BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5" TextTransform="None"/>
                         <Button Text="B" x:Name="Bb" WidthRequest="50" HeightRequest="40" Clicked="B" BackgroundColor="#eecc8d" 
                         BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                         <Button Text="Bm" x:Name="Bbm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Bm" BackgroundColor="#eecc8d"
@@ -47,9 +51,17 @@
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                         <Button Text="Cm" x:Name="Ccm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Cm" BackgroundColor="#eecc8d"
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
+                        <Button Text="C#" x:Name="CcSh" WidthRequest="50" HeightRequest="40" Clicked="Csh" BackgroundColor="#eecc8d"
+                    BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
+                        <Button Text="C#m" x:Name="CcShm" TextTransform="None" WidthRequest="60" HeightRequest="40" Clicked="Cshm" BackgroundColor="#eecc8d"
+                    BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                         <Button Text="D" x:Name="Dd" WidthRequest="50" HeightRequest="40" Clicked="D" BackgroundColor="#eecc8d" 
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                         <Button Text="Dm" x:Name="Ddm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Dm" BackgroundColor="#eecc8d"
+                    BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
+                        <Button Text="D#" x:Name="DdSh" WidthRequest="50" HeightRequest="40" Clicked="Dsh" BackgroundColor="#eecc8d" 
+                    BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
+                        <Button Text="D#m" x:Name="DdShm" TextTransform="None" WidthRequest="60" HeightRequest="40" Clicked="Dshm" BackgroundColor="#eecc8d"
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                         <Button Text="E" x:Name="Ee" WidthRequest="50" HeightRequest="40" Clicked="E" BackgroundColor="#eecc8d"
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
@@ -61,9 +73,17 @@
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                         <Button Text="Fm" x:Name="Ffm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Fm" BackgroundColor="#eecc8d"
                      BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
+                        <Button Text="F#" x:Name="FfSh" WidthRequest="50" HeightRequest="40" Clicked="Fsh" BackgroundColor="#eecc8d" 
+                    BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
+                        <Button Text="F#m" x:Name="FfShm" TextTransform="None" WidthRequest="60" HeightRequest="40" Clicked="Fshm" BackgroundColor="#eecc8d"
+                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                         <Button Text="G" x:Name="Gg" WidthRequest="50" HeightRequest="40" Clicked="G" BackgroundColor="#eecc8d"
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                         <Button Text="Gm" x:Name="Ggm" TextTransform="None" WidthRequest="50" HeightRequest="40" Clicked="Gm" BackgroundColor="#eecc8d" 
+                    BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
+                        <Button Text="G#" x:Name="GgSh" WidthRequest="50" HeightRequest="40" Clicked="Gsh" BackgroundColor="#eecc8d"
+                    BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
+                        <Button Text="G#m" x:Name="GgShm" TextTransform="None" WidthRequest="60" HeightRequest="40" Clicked="Gshm" BackgroundColor="#eecc8d" 
                     BorderWidth="2" BorderColor="#f08b33" TextColor="#8a2c02" CornerRadius="5"/>
                     </StackLayout>
                 </ScrollView>

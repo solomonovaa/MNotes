@@ -48,29 +48,50 @@ namespace Notes.Views
             {"File: e.png", new chordsStruct { id = "11", chordsType = typesOfObjects.guitar, chordsButtonName = "Ee" }},
             {"File: e7.png", new chordsStruct { id = "12", chordsType = typesOfObjects.guitar, chordsButtonName = "Ee7" }},
             {"File: em.png", new chordsStruct { id = "13", chordsType = typesOfObjects.guitar, chordsButtonName = "Eem" }},
-            {"File: f.png", new chordsStruct { id = "14", chordsType = typesOfObjects.guitar, chordsButtonName = "Ff" }},
+            {"File: F.png", new chordsStruct { id = "14", chordsType = typesOfObjects.guitar, chordsButtonName = "Ff" }},
             {"File: fm.png", new chordsStruct { id = "15", chordsType = typesOfObjects.guitar, chordsButtonName = "Ffm" }},
             {"File: g.png", new chordsStruct { id = "16", chordsType = typesOfObjects.guitar, chordsButtonName = "Gg" }},
             {"File: gm.png", new chordsStruct { id = "17", chordsType = typesOfObjects.guitar, chordsButtonName = "Ggm" }},
+            {"File: ASh.png", new chordsStruct { id = "18", chordsType = typesOfObjects.guitar, chordsButtonName = "AaSh" }},
+            {"File: AShm.png", new chordsStruct { id = "19", chordsType = typesOfObjects.guitar, chordsButtonName = "AaShm" }},
+            {"File: CSh.png", new chordsStruct { id = "20", chordsType = typesOfObjects.guitar, chordsButtonName = "CcSh" }},
+            {"File: CShm.png", new chordsStruct { id = "21", chordsType = typesOfObjects.guitar, chordsButtonName = "CcShm" }},
+            {"File: DSh.png", new chordsStruct { id = "22", chordsType = typesOfObjects.guitar, chordsButtonName = "DdSh" }},
+            {"File: DShm.png", new chordsStruct { id = "23", chordsType = typesOfObjects.guitar, chordsButtonName = "DdShm" }},
+            {"File: FSh.png", new chordsStruct { id = "24", chordsType = typesOfObjects.guitar, chordsButtonName = "FfSh" }},
+            {"File: FShm.png", new chordsStruct { id = "25", chordsType = typesOfObjects.guitar, chordsButtonName = "FfShm" }},
+            {"File: GSh.png", new chordsStruct { id = "26", chordsType = typesOfObjects.guitar, chordsButtonName = "GgSh" }},
+            {"File: GShm.png", new chordsStruct { id = "27", chordsType = typesOfObjects.guitar, chordsButtonName = "GgShm" }},
+
 
             //Пианино
-            {"File: PA.png", new chordsStruct { id = "18", chordsType = typesOfObjects.piano, chordsButtonName = "Aa" }},
-            {"File: PAm.png", new chordsStruct { id = "19", chordsType = typesOfObjects.piano, chordsButtonName = "Aam" }},
-            {"File: PA7.png", new chordsStruct { id = "20", chordsType = typesOfObjects.piano, chordsButtonName = "Aa7" }},
-            {"File: PB.png", new chordsStruct { id = "21", chordsType = typesOfObjects.piano, chordsButtonName = "Bb" }},
-            {"File: PBm.png", new chordsStruct { id = "22", chordsType = typesOfObjects.piano, chordsButtonName = "Bbm" }},
-            {"File: PB7.png", new chordsStruct { id = "23", chordsType = typesOfObjects.piano, chordsButtonName = "Bb7" }},
-            {"File: PC.png", new chordsStruct { id = "24", chordsType = typesOfObjects.piano, chordsButtonName = "Cc" }},
-            {"File: PCm.png", new chordsStruct { id = "25", chordsType = typesOfObjects.piano, chordsButtonName = "Ccm" }},
-            {"File: PD.png", new chordsStruct { id = "26", chordsType = typesOfObjects.piano, chordsButtonName = "Dd" }},
-            {"File: PDm.png", new chordsStruct { id = "27", chordsType = typesOfObjects.piano, chordsButtonName = "Ddm" }},
-            {"File: PE.png", new chordsStruct { id = "28", chordsType = typesOfObjects.piano, chordsButtonName = "Ee" }},
-            {"File: PE7.png", new chordsStruct { id = "29", chordsType = typesOfObjects.piano, chordsButtonName = "Ee7" }},
-            {"File: PEm.png", new chordsStruct { id = "30", chordsType = typesOfObjects.piano, chordsButtonName = "Eem" }},
-            {"File: PF.png", new chordsStruct { id = "31", chordsType = typesOfObjects.piano, chordsButtonName = "Ff" }},
-            {"File: PFm.png", new chordsStruct { id = "32", chordsType = typesOfObjects.piano, chordsButtonName = "Ffm" }},
-            {"File: PG.png", new chordsStruct { id = "33", chordsType = typesOfObjects.piano, chordsButtonName = "Gg" }},
-            {"File: PGm.png", new chordsStruct { id = "34", chordsType = typesOfObjects.piano, chordsButtonName = "Ggm" }}
+            {"File: PA.png", new chordsStruct { id = "28", chordsType = typesOfObjects.piano, chordsButtonName = "Aa" }},
+            {"File: PAm.png", new chordsStruct { id = "29", chordsType = typesOfObjects.piano, chordsButtonName = "Aam" }},
+            {"File: PA7.png", new chordsStruct { id = "30", chordsType = typesOfObjects.piano, chordsButtonName = "Aa7" }},
+            {"File: PB.png", new chordsStruct { id = "31", chordsType = typesOfObjects.piano, chordsButtonName = "Bb" }},
+            {"File: PBm.png", new chordsStruct { id = "32", chordsType = typesOfObjects.piano, chordsButtonName = "Bbm" }},
+            {"File: PB7.png", new chordsStruct { id = "33", chordsType = typesOfObjects.piano, chordsButtonName = "Bb7" }},
+            {"File: PC.png", new chordsStruct { id = "34", chordsType = typesOfObjects.piano, chordsButtonName = "Cc" }},
+            {"File: PCm.png", new chordsStruct { id = "35", chordsType = typesOfObjects.piano, chordsButtonName = "Ccm" }},
+            {"File: PD.png", new chordsStruct { id = "36", chordsType = typesOfObjects.piano, chordsButtonName = "Dd" }},
+            {"File: PDm.png", new chordsStruct { id = "37", chordsType = typesOfObjects.piano, chordsButtonName = "Ddm" }},
+            {"File: PE.png", new chordsStruct { id = "38", chordsType = typesOfObjects.piano, chordsButtonName = "Ee" }},
+            {"File: PE7.png", new chordsStruct { id = "39", chordsType = typesOfObjects.piano, chordsButtonName = "Ee7" }},
+            {"File: PEm.png", new chordsStruct { id = "40", chordsType = typesOfObjects.piano, chordsButtonName = "Eem" }},
+            {"File: PF.png", new chordsStruct { id = "41", chordsType = typesOfObjects.piano, chordsButtonName = "Ff" }},
+            {"File: PFm.png", new chordsStruct { id = "42", chordsType = typesOfObjects.piano, chordsButtonName = "Ffm" }},
+            {"File: PG.png", new chordsStruct { id = "43", chordsType = typesOfObjects.piano, chordsButtonName = "Gg" }},
+            {"File: PGm.png", new chordsStruct { id = "44", chordsType = typesOfObjects.piano, chordsButtonName = "Ggm" }},
+            {"File: PASh.png", new chordsStruct { id = "45", chordsType = typesOfObjects.piano, chordsButtonName = "AaSh" }},
+            {"File: PAShm.png", new chordsStruct { id = "46", chordsType = typesOfObjects.piano, chordsButtonName = "AaShm" }},
+            {"File: PCSh.png", new chordsStruct { id = "47", chordsType = typesOfObjects.piano, chordsButtonName = "CcSh" }},
+            {"File: PCShm.png", new chordsStruct { id = "48", chordsType = typesOfObjects.piano, chordsButtonName = "CcShm" }},
+            {"File: PDSh.png", new chordsStruct { id = "49", chordsType = typesOfObjects.piano, chordsButtonName = "DdSh" }},
+            {"File: PDShm.png", new chordsStruct { id = "50", chordsType = typesOfObjects.piano, chordsButtonName = "DdShm" }},
+            {"File: PFSh.png", new chordsStruct { id = "51", chordsType = typesOfObjects.piano, chordsButtonName = "FfSh" }},
+            {"File: PFShm.png", new chordsStruct { id = "52", chordsType = typesOfObjects.piano, chordsButtonName = "FfShm" }},
+            {"File: PGSh.png", new chordsStruct { id = "53", chordsType = typesOfObjects.piano, chordsButtonName = "GgSh" }},
+            {"File: PGShm.png", new chordsStruct { id = "54", chordsType = typesOfObjects.piano, chordsButtonName = "GgShm" }},
 
         };
         //Список, который хранит добавленные аккорды
@@ -79,11 +100,11 @@ namespace Notes.Views
         //Словарь, который хранит гитарные бои
         private Dictionary<string, string> boysDictionary = new Dictionary<string, string>
         {
-            {"File: BDown.png", "35"},
-            {"File: MDown.png", "36"},
-            {"File: BUp.png", "37"},
-            {"File: MUp.png", "38" },
-            {"File: cross.png", "39" }
+            {"File: BDown.png", "55"},
+            {"File: MDown.png", "56"},
+            {"File: BUp.png", "57"},
+            {"File: MUp.png", "58" },
+            {"File: cross.png", "59" }
         };
         //Список, который хранит добавленые гитарные бои
         private List<string> addedBoysList = new List<string>();
@@ -109,30 +130,50 @@ namespace Notes.Views
             {"15","File: fm.png"},
             {"16","File: g.png"},
             {"17","File: gm.png"},
+            {"18","File: ASh.png"},
+            {"19","File: AShm.png"},
+            {"20","File: CSh.png"},
+            {"21","File: CShm.png"},
+            {"22","File: DSh.png"},
+            {"23","File: DShm.png"},
+            {"24","File: FSh.png"},
+            {"25","File: FShm.png"},
+            {"26","File: GSh.png"},
+            {"27","File: GShm.png"},
             //Пианино
-            {"18","File: PA.png"},
-            {"19","File: PAm.png"},
-            {"20","File: PA7.png"},
-            {"21","File: PB.png"},
-            {"22","File: PBm.png"},
-            {"23","File: PB7.png"},
-            {"24","File: PC.png"},
-            {"25","File: PCm.png"},
-            {"26","File: PD.png"},
-            {"27","File: PDm.png"},
-            {"28","File: PE.png"},
-            {"29","File: PE.png"},
-            {"30","File: PEm.png"},
-            {"31","File: PF.png"},
-            {"32","File: PFm.png"},
-            {"33","File: PG.png"},
-            {"34","File: PGm.png"},
+            {"28","File: PA.png"},
+            {"29","File: PAm.png"},
+            {"30","File: PA7.png"},
+            {"31","File: PB.png"},
+            {"32","File: PBm.png"},
+            {"33","File: PB7.png"},
+            {"34","File: PC.png"},
+            {"35","File: PCm.png"},
+            {"36","File: PD.png"},
+            {"37","File: PDm.png"},
+            {"38","File: PE.png"},
+            {"39","File: PE.png"},
+            {"40","File: PEm.png"},
+            {"41","File: PF.png"},
+            {"42","File: PFm.png"},
+            {"43","File: PG.png"},
+            {"44","File: PGm.png"},
+            {"45","File: PASh.png"},
+            {"46","File: PAShm.png"},
+            {"47","File: PCSh.png"},
+            {"48","File: PCShm.png"},
+            {"49","File: PDSh.png"},
+            {"50","File: PDShm.png"},
+            {"51","File: PfSh.png"},
+            {"52","File: PFShm.png"},
+            {"53","File: PGSh.png"},
+            {"54","File: PGShm.png"},
             //Бой
-            {"35","File: BDown.png"},
-            {"36","File: MDown.png"},
-            {"37","File: BUp.png"},
-            {"38","File: MUp.png"},
-            {"39","File: cross.png"},
+            {"55","File: BDown.png"},
+            {"56","File: MDown.png"},
+            {"57","File: BUp.png"},
+            {"58","File: MUp.png"},
+            {"59","File: cross.png"},
         };
 
         public string ItemId
@@ -562,6 +603,60 @@ namespace Notes.Views
                 }
             }
         }
+        private void Ash(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " ASh ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " ASh ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "AaSh", "PASh.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "AaSh", "ASh.png");
+                }
+            }
+        }
+        private void Ashm(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " AShm ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " AShm ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "AaShm", "PAShm.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "AaShm", "AShm.png");
+                }
+            }
+        }
         private void A7(object sender, EventArgs e)
         {
             if (WriteDownTheChords.IsToggled)
@@ -724,6 +819,60 @@ namespace Notes.Views
                 }
             }
         }
+        private void Csh(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " CSh ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " CSh ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "CcSh", "PCSh.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "CcSh", "CSh.png");
+                }
+            }
+        }
+        private void Cshm(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " CShm ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " CShm ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "CcShm", "PCShm.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "CcShm", "CShm.png");
+                }
+            }
+        }
         private void D(object sender, EventArgs e)
         {
             if (WriteDownTheChords.IsToggled)
@@ -775,6 +924,60 @@ namespace Notes.Views
                 else
                 {
                     AddObjectToStack(typesOfObjects.guitar, stackForImages, "Ddm", "dm.png");
+                }
+            }
+        }
+        private void Dsh(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " DSh ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " DSh ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "DdSh", "PDSh.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "DdSh", "DSh.png");
+                }
+            }
+        }
+        private void Dshm(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " DShm ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " DShm ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "DdShm", "PDShm.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "DdShm", "DShm.png");
                 }
             }
         }
@@ -913,6 +1116,60 @@ namespace Notes.Views
                 }
             }
         }
+        private void Fsh(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " FSh ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " FSh ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "FfSh", "PFSh.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "FfSh", "FSh.png");
+                }
+            }
+        }
+        private void Fshm(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " FShm ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " FShm ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "FfShm", "PFShm.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "FfShm", "FShm.png");
+                }
+            }
+        }
         private void G(object sender, EventArgs e)
         {
             if (WriteDownTheChords.IsToggled)
@@ -964,6 +1221,60 @@ namespace Notes.Views
                 else
                 {
                     AddObjectToStack(typesOfObjects.guitar, stackForImages, "Ggm", "gm.png");
+                }
+            }
+        }
+        private void Gsh(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " GSh ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " GSh ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "GgSh", "PGSh.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "GgSh", "GSh.png");
+                }
+            }
+        }
+        private void Gshm(object sender, EventArgs e)
+        {
+            if (WriteDownTheChords.IsToggled)
+            {
+                try
+                {
+                    string[] editorLines = MainEditorForText.Text.Split('\n');
+                    editorLines[0] = editorLines[0].Replace(editorLines[0], editorLines[0] + " GShm ");
+                    MainEditorForText.Text = string.Join("\n", editorLines);
+                }
+                catch
+                {
+                    MainEditorForText.Text = " GShm ";
+                }
+            }
+            else
+            {
+                if (GuitarOrPiano.IsToggled)
+                {
+                    AddObjectToStack(typesOfObjects.piano, stackForImages, "GgShm", "PGShm.png");
+                }
+                else
+                {
+                    AddObjectToStack(typesOfObjects.guitar, stackForImages, "GgShm", "GShm.png");
                 }
             }
         }
@@ -1153,13 +1464,13 @@ namespace Notes.Views
         {
             if (IsBoyVisibleFIrstClick)
             {
-                constructBoyButton.Text = "Скрыть конструктор";
+                constructBoyButton.Text = "Скрыть бой";
                 constructBoyStack.IsVisible = true;
                 IsBoyVisibleFIrstClick = false;
             }
             else
             {
-                constructBoyButton.Text = "Скрыть бой";
+                constructBoyButton.Text = "Открыть конструктор";
                 constructBoyStack.IsVisible = false;
                 IsBoyVisibleFIrstClick = true;
             }
@@ -1182,5 +1493,7 @@ namespace Notes.Views
             }
 
         }
+
+
     }
 }
