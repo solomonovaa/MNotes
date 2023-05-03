@@ -494,7 +494,7 @@ namespace Notes.Views
             else
             {
                 SaveButton.Text = "Ой дурак... нечего сохранять!!";
-                
+                SaveButton.FontSize = 10;
             }
 
 
@@ -517,30 +517,39 @@ namespace Notes.Views
         }
         // Удалить заметку
         async void OnDeleteButtonClicked(object sender, EventArgs e)
-        { // Окно с предупреждением, точно ли пользователь хочет удалить заметку 
-            bool answer = await DisplayAlert("Удаление заметки", "Вы уверены, что хотите удалить заметку?", "Да", "Отмена");
-
-            if (answer)
+        {
+            if (MainEditorForText.Text == "")
             {
-                var note = (Note)BindingContext;
-                XmlDocument xDoc = new XmlDocument();
-                xDoc.Load(Path.Combine(App.FolderPath, "notes.xml"));
-                XmlElement xRoot = xDoc.DocumentElement;
-                //Проверяем новая ли заметка или же загруженная
-                //Если у заметки есть ID, то заметка старая. В противном случае новая
-                if (note.Id != null)
-                {   //Находим заметку по ID
-                    XmlNode xNote = xRoot.SelectSingleNode($"/Notes/Note[@ID={note.Id}]");
-                    if (xNote != null)
-                    {
-                        //Если заметка надена, то удаляем
-                        xRoot.RemoveChild(xNote);
-                        xDoc.Save(Path.Combine(App.FolderPath, "notes.xml"));
+                DeleteButton.Text = "Удалять нечего, дурак)";
+                DeleteButton.FontSize = 10;
+            }
+            else 
+            { 
+                // Окно с предупреждением, точно ли пользователь хочет удалить заметку 
+                bool answer = await DisplayAlert("Удаление заметки", "Вы уверены, что хотите удалить заметку?", "Да", "Отмена");
+
+                if (answer)
+                {
+                    var note = (Note)BindingContext;
+                    XmlDocument xDoc = new XmlDocument();
+                    xDoc.Load(Path.Combine(App.FolderPath, "notes.xml"));
+                    XmlElement xRoot = xDoc.DocumentElement;
+                    //Проверяем новая ли заметка или же загруженная
+                    //Если у заметки есть ID, то заметка старая. В противном случае новая
+                    if (note.Id != null)
+                    {   //Находим заметку по ID
+                        XmlNode xNote = xRoot.SelectSingleNode($"/Notes/Note[@ID={note.Id}]");
+                        if (xNote != null)
+                        {
+                            //Если заметка надена, то удаляем
+                            xRoot.RemoveChild(xNote);
+                            xDoc.Save(Path.Combine(App.FolderPath, "notes.xml"));
+                        }
                     }
-                }
-                // Navigate backwards
-                await Shell.Current.GoToAsync("..");
+                    // Navigate backwards
+                    await Shell.Current.GoToAsync("..");
                 
+                }
             }
         }
         // методы обработки нажатия на кнопку с аккордом
