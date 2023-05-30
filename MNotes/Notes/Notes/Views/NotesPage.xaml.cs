@@ -72,15 +72,7 @@ namespace Notes.Views
             collectionView.ItemsSource = notes
             .OrderBy(d => d.Id)
             .ToList();
-            // Пока не решила, нужен ли этот стек наверху, так что пусть пока будет так
-            if (favsNotes.Count > 0)
-            {
-                collectionViewFavs.IsVisible = false;
-            }
-            else
-            {
-                collectionViewFavs.IsVisible = false;
-            }
+
         }
 
 
@@ -184,7 +176,7 @@ namespace Notes.Views
             else 
             {
                 // Иначе выполняем поиск по строке и отображаем только совпадающие заметки
-                var filteredNotes = notes.Where(n => n.Title.Contains(searchQuery) || n.Text.Contains(searchQuery)).ToList();
+                var filteredNotes = notes.Where(n => n.Title.Contains(searchQuery.ToUpper()) || n.Title.Contains(searchQuery.ToLower()) || n.Text.Contains(searchQuery.ToUpper()) || n.Text.Contains(searchQuery.ToLower()) || n.Text.Contains(searchQuery)|| n.Title.Contains(searchQuery)).ToList();
                 collectionView.ItemsSource = filteredNotes;
             }
             
@@ -241,5 +233,7 @@ namespace Notes.Views
                 }
             }
         }
+
+
     }
 }

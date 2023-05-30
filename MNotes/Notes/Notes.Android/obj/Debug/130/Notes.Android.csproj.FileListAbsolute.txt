@@ -2885,8 +2885,6 @@ C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\cross.jpg
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\mdown.jpg
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\mup.jpg
-C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\favoriteimage.jpg
-C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\unfavoriteimage.jpg
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\mainicon.png
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\favoriteicon.png
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\uploadflags.txt
@@ -3488,11 +3486,6 @@ C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\stamp\_Genera
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\bgimage.jpg
-C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\favoritenew.jpg
-C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\unfavoritenew.jpg
-C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\favoriteorange.jpg
-C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\unfavoriteorange.jpg
-C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\deletebuttonimage.jpg
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\ash.jpg
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\ashm.jpg
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\csh.jpg
@@ -3513,3 +3506,6 @@ C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\pfshm.jpg
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\pgsh.jpg
 C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\pgshm.jpg
+C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\deletebuttonimage.png
+C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\favoriteorange.png
+C:\Users\Саша\Desktop\MNotes\Notes\Notes.Android\obj\Debug\130\res\drawable\unfavoriteorange.png

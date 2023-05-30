@@ -130,7 +130,7 @@
                     <StackLayout Orientation="Horizontal" x:Name="stackForBoy" Spacing="2"/>
                 </ScrollView>
             </StackLayout>
-            <Label Text="{Binding Date}"/>
+            
 
             <ScrollView HeightRequest="600" x:Name="scrollForMainEntry">
                 <Editor Placeholder="Начните вводить текст песни..." Text="{Binding Text}" AutoSize="TextChanges" 

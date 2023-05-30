@@ -13,9 +13,9 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="7" BorderColor="Purple" CornerRadius="10">
+                        <Frame Padding="7" BorderColor="RosyBrown" CornerRadius="10">
                             <StackLayout Orientation="Horizontal">
-                                <ImageButton Source="{Binding FavoriteStatus}" Margin="5" x:Name="favoriteButtonOnFavPage"
+                                <ImageButton Source="{Binding FavoriteStatus}" Margin="5" x:Name="favoriteButtonOnFavPage" BackgroundColor="White"
                                          Clicked="favoriteButtonOnFavPage_Clicked" WidthRequest="30" VerticalOptions="Center"/>
                                 <StackLayout>
                                     <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold"></Label>

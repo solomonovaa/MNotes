@@ -9,8 +9,9 @@
     </ContentPage.ToolbarItems>
     <StackLayout>
         <SearchBar TextChanged="OnSearchTextChanged" Placeholder="Поиск" BackgroundColor="#FFEACF" x:Name="searchBar"/>
-        <CollectionView x:Name="collectionViewFavs" Margin="10" SelectionMode="Single" IsVisible="false" 
-                        HeightRequest="100" SelectionChanged="OnSelectionChanged">
+
+        <CollectionView x:Name="collectionViewFavs" Margin="10" SelectionMode="Single"
+                        HeightRequest="100" SelectionChanged="OnSelectionChanged" IsVisible="false">
 
 
             <CollectionView.ItemsLayout>
@@ -38,16 +39,19 @@
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="7" BorderColor="SaddleBrown" CornerRadius="10">
+                    <Frame Padding="7" BorderColor="RosyBrown" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
-                            <ImageButton Source="deleteButtonImage.jpg" Margin="5" Clicked="DeleteOnMainPageButton_Clicked"
-                                         WidthRequest="30" BackgroundColor="White"/>
-                            <ImageButton Source="{Binding FavoriteStatus}" x:Name="favoriteButton"
-                                         Clicked="FavoriteButton_Clicked" WidthRequest="30" VerticalOptions="Center"/>
+                            <StackLayout Orientation="Horizontal" Margin="7">
+                                <ImageButton Source="deleteButtonImage.jpg" Margin="1" Clicked="DeleteOnMainPageButton_Clicked"
+                                                 WidthRequest="30" BackgroundColor="White" />
+                                <ImageButton Source="{Binding FavoriteStatus}" x:Name="favoriteButton" BackgroundColor="White"
+                                         Clicked="FavoriteButton_Clicked" WidthRequest="30" HorizontalOptions="End" Margin="-5"/>
+                            </StackLayout>
                             <StackLayout>
                                 <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold"></Label>
                                 <Label Text="{Binding Date}" TextColor="Silver" FontSize="Small" FontAttributes="Italic"/>
                             </StackLayout>
+                            
                         </StackLayout>
                     </Frame>
                 </DataTemplate>
